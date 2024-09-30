@@ -1,0 +1,39 @@
+name: garmentz_scanner
+description: A Flutter app that scans clothing and provides recommendations based on images.
+
+# The version number of the app.
+version: 1.0.0+1
+environment:
+  sdk: ">=2.14.0 <4.0.0"
+
+dependencies:
+  flutter:
+sdk: flutter
+
+# Image Picker to pick images from gallery or camera
+image_picker: ^0.8.5+3
+
+# Flux package for state management
+flutter_flux: ">=2.14.0 <4.0.0"
+
+# HTTP package to make API requests for recommendations (if needed)
+http: ^0.13.3
+
+# Default dependency for iOS-style icons
+cupertino_icons: ^1.0.2
+dev_dependencies:flutter_test:
+  sdk: flutter
+
+flutter:
+  uses-material-design: true # Enable Material Icons for the app
+
+# Specify assets such as images if required.
+assets:
+  - assets/images/
+
+# Specify custom fonts if using fonts:
+  - family: Roboto
+    fonts:
+      - asset: fonts/Roboto-Regular.ttf
+      - asset: fonts/Roboto-Bold.ttf
+        weight: 700

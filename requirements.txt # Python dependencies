@@ -2,6 +2,8 @@ flask
 requests
 pillow
 tensorflow
-opencv-python
 numpy
-flutter
+Werkzeug
+Gunicorn
+python-dotenv
+
