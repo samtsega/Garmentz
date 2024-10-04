@@ -5,208 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35c2ec3a-02a5-4fc7-9569-3b24475fa06d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api_services/amazon_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api_services/depop_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api_services/depreciation_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api_services/ebay_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api_services/farfetch_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api_services/fashionphile_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api_services/grailed_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api_services/recommendation_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api_services/saksfifth_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api_services/ssense_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api_services/vestiare_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/requirements.backend.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/utils/currency_conversions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/utils/image_processing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/utils/util.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloud storage/firebase_config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_database/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/.metadata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/analysis_options.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/app/src/debug/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/app/src/main/kotlin/com/example/garmentz/MainActivity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/app/src/main/res/drawable-v21/launch_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/app/src/main/res/drawable/launch_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/app/src/main/res/values-night/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/app/src/profile/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Flutter/AppFrameworkInfo.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Flutter/Debug.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Flutter/Release.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/AppDelegate.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Base.lproj/Main.storyboard" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner/Runner-Bridging-Header.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/RunnerTests/RunnerTests.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/actions/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/actions/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/actions/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/actions/analysis_options.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/actions/bin/recommendation_actions.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/actions/lib/recommendation_actions.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/actions/pubspec.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/actions/pubspec.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/actions/test/recommendation_actions_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/main.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/analysis_options.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/bin/image_picker_widget.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/image_picker_screen/image_picker_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/pubspec.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/pubspec.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/test/image_picker_widget_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services/api_service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services/api_service/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services/api_service/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services/api_service/analysis_options.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services/api_service/bin/scan_api.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services/api_service/lib/api_service.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services/api_service/pubspec.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services/api_service/pubspec.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services/api_service/test/scan_api_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/stores/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/stores/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/stores/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/stores/analysis_options.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/stores/bin/stores.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/stores/pubspec.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/stores/pubspec.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/stores/recommendation_store/recommendation_store.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/stores/test/stores_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/widgets/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/widgets/CHANGELOG.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/widgets/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/widgets/analysis_options.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/widgets/bin/clothing_card.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/widgets/clothing_card/clothing_card.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/widgets/pubspec.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/widgets/pubspec.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/widgets/test/clothing_card_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/linux/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/linux/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/linux/flutter/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/linux/flutter/generated_plugin_registrant.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/linux/flutter/generated_plugins.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/linux/main.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/linux/my_application.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/linux/my_application.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Flutter/Flutter-Debug.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Flutter/Flutter-Release.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner/AppDelegate.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_64.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner/Base.lproj/MainMenu.xib" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner/Configs/AppInfo.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner/Configs/Debug.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner/Configs/Release.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner/Configs/Warnings.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner/DebugProfile.entitlements" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner/Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner/MainFlutterWindow.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Runner/Release.entitlements" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/RunnerTests/RunnerTests.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/pubspec.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/pubspec.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/test/widget_test.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/web/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/web/icons/Icon-192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/web/icons/Icon-512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/web/icons/Icon-maskable-192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/web/icons/Icon-maskable-512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/web/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/web/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/windows/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/windows/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/windows/flutter/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/windows/flutter/generated_plugin_registrant.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/windows/flutter/generated_plugins.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/windows/runner/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/windows/runner/Runner.rc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/windows/runner/flutter_window.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/windows/runner/flutter_window.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/windows/runner/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/windows/runner/resource.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/windows/runner/resources/app_icon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/windows/runner/runner.exe.manifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/windows/runner/utils.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/windows/runner/utils.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/windows/runner/win32_window.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/windows/runner/win32_window.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/GarmentzCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GarmentzCode.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/classifier.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/api.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/price_scraper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/amazon_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/amazon_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/ebay_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/ebay_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt # Python dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt # Python dependencies" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -221,6 +23,7 @@
         <option value="SQL File" />
         <option value="JavaScript File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -238,6 +41,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "samtsega"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/samtsega/Garmentz",
+    "accountId": "40ac9825-e839-4fe1-b3a6-df73577aa280"
+  }
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -252,40 +67,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.classifer # Pretrained model for image recognition using MobileNetV2.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.models.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Shell Script.flutter.executor&quot;: &quot;Run&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Python.classifer # Pretrained model for image recognition using MobileNetV2.executor": "Debug",
+    "Python.data_generator.executor": "Run",
+    "Python.depreciation_service.executor": "Run",
+    "Python.model.executor": "Run",
+    "Python.models.executor": "Debug",
+    "Python.train.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Shell Script.flutter.executor": "Run",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mongo&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mongo"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/backend/utils" />
-      <recent name="$PROJECT_DIR$/backend/api_services" />
-      <recent name="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services" />
+      <recent name="$PROJECT_DIR$/backend/templates" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/backend/templates # OAUTH " />
       <recent name="$PROJECT_DIR$/backend" />
-      <recent name="$PROJECT_DIR$/garmentz_flutter_frontend/lib/recommendation_actions" />
+      <recent name="$PROJECT_DIR$/backend/wear_and_tear model" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.classifer">
+  <component name="RunManager" selected="Python.train">
     <configuration name="classifer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="GarmentzCode" />
       <option name="ENV_FILES" value="" />
@@ -301,6 +121,98 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/models/classifer" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="data_generator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GarmentzCode" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/models" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/models/data_generator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="depreciation_service" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GarmentzCode" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/api_services" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/api_services/depreciation_service.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GarmentzCode" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/models" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/models/model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GarmentzCode" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backend/datasets/train" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend/train.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -325,9 +237,21 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.data_generator" />
+      <item itemvalue="Python.depreciation_service" />
+      <item itemvalue="Python.model" />
+      <item itemvalue="Python.train" />
       <item itemvalue="Python.classifer" />
       <item itemvalue="Shell Script.flutter" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.train" />
+        <item itemvalue="Python.data_generator" />
+        <item itemvalue="Python.model" />
+        <item itemvalue="Python.depreciation_service" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -350,14 +274,31 @@
       <workItem from="1727029801461" duration="45431000" />
       <workItem from="1727402309791" duration="18968000" />
       <workItem from="1727534571917" duration="19503000" />
+      <workItem from="1727660264662" duration="68443000" />
+      <workItem from="1728067823215" duration="3815000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend/services/depreciation_service.py</url>
+          <line>98</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/GarmentzCode$classifer___Pretrained_model_for_image_recognition_using_MobileNetV2.coverage" NAME="classifer # Pretrained model for image recognition using MobileNetV2 Coverage Results" MODIFIED="1726995048542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/models" />
+    <SUITE FILE_PATH="coverage/GarmentzCode$model.coverage" NAME="model Coverage Results" MODIFIED="1727768719196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/models" />
+    <SUITE FILE_PATH="coverage/GarmentzCode$depreciation_service.coverage" NAME="depreciation_service Coverage Results" MODIFIED="1727660629067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/api_services" />
     <SUITE FILE_PATH="coverage/GarmentzCode$models.coverage" NAME="models Coverage Results" MODIFIED="1726982555913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models # Pre-trained ML models" />
+    <SUITE FILE_PATH="coverage/GarmentzCode$train.coverage" NAME="train Coverage Results" MODIFIED="1727801897302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/datasets/train" />
+    <SUITE FILE_PATH="coverage/GarmentzCode$data_generator.coverage" NAME="data_generator Coverage Results" MODIFIED="1727768745849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/models" />
   </component>
 </project>

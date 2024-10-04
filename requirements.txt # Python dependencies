@@ -6,4 +6,5 @@ numpy
 Werkzeug
 Gunicorn
 python-dotenv
+pandas
 
