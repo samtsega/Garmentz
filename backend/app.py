@@ -1,62 +1,151 @@
+from flask import Flask, request, jsonify, redirect, url_for, render_template, session
+from authlib.integrations.flask_client import OAuth
+from tf_keras.models import load_model
+import numpy as np
 import os
-from flask import Flask, request, jsonify
-from werkzeug.utils import secure_filename
-from depreciation_service import calculate_depreciation
-from currency_conversions import convert_price # Import the currency conversion function
+from dotenv import load_dotenv
+from utils.image_processing import process_image
+from utils.currency_conversions import convert_currency
+from services.depreciation_service import calculate_depreciation
 
+load_dotenv()
+
+# Initialize Flask app
 app = Flask(__name__)
 
-# Set up an upload folder for the images
-UPLOAD_FOLDER = 'uploads'
-if not os.path.exists(UPLOAD_FOLDER): os.makedirs(UPLOAD_FOLDER)
+app.secret_key = 'your_secret_key'  # Replace with your actual secret key
+oauth = OAuth(app)
 
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+# Register OAuth clients for Google, Facebook, and Twitter
+oauth.register(
+    name='google',
+    client_id=os.getenv('GOOGLE_CLIENT_ID'),
+    client_secret=os.getenv('GOOGLE_CLIENT_SECRET'),
+    authorize_url='https://accounts.google.com/o/oauth2/auth',
+    authorize_params=None,
+    access_token_url='https://accounts.google.com/o/oauth2/token',
+    access_token_params=None,
+    refresh_token_url=None,
+    redirect_uri='http://localhost:5000/google/callback',
+    client_kwargs={'scope': 'openid profile email'}
+)
 
-# Allowed file extensions for image uploads
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
+oauth.register(
+    name='google',
+    client_id=os.getenv('GOOGLE_CLIENT_ID'),
+    client_secret=os.getenv('GOOGLE_CLIENT_SECRET'),
+    authorize_url='https://accounts.google.com/o/oauth2/auth',
+    authorize_params=None,
+    access_token_url='https://accounts.google.com/o/oauth2/token',
+    access_token_params=None,
+    refresh_token_url=None,
+    redirect_uri='http://localhost:5000/google/callback',
+    client_kwargs={'scope': 'openid profile email'}
+)
 
-def allowed_file(filename):
-    """ Check if the file has an allowed extension. """
-return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+oauth.register(
+    name='facebook',
+    client_id=os.getenv('FACEBOOK_CLIENT_ID'),
+    client_secret=os.getenv('FACEBOOK_CLIENT_SECRET'),
+    authorize_url='https://www.facebook.com/dialog/oauth',
+    access_token_url='https://graph.facebook.com/oauth/access_token',
+    redirect_uri='http://localhost:5000/facebook/callback',
+    client_kwargs={'scope': 'email public_profile'}
+)
 
-@app.route('/scan', methods=['POST'])
-def scan_clothing():
-    """ API route to handle the clothing scan and depreciation calculation. """
-if 'image' not in request.files:
-return jsonify({'error': 'No image file provided'}), 400
-image = request.files['image']
+oauth.register(
+    name='twitter',
+    client_id=os.getenv('TWITTER_CLIENT_ID'),
+    client_secret=os.getenv('TWITTER_CLIENT_SECRET'),
+    request_token_url='https://api.twitter.com/oauth/request_token',
+    authorize_url='https://api.twitter.com/oauth/authenticate',
+    access_token_url='https://api.twitter.com/oauth/access_token',
+    redirect_uri='http://localhost:5000/twitter/callback',
+)
 
-if image.filename == '': return jsonify({'error': 'No selected file'}), 400
-if not allowed_file(image.filename): return jsonify({'error': 'File type not allowed'}), 400
+@app.route('/')
+def home():
+    return render_template('index.html')
 
-# Save the uploaded image
-filepath = os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(image.filename)) image.save(filepath)
+@app.route('/login/<provider>')
+def login(provider):
+    provider_oauth = oauth.create_client(provider)
+    redirect_uri = url_for(f'{provider}_callback', _external=True)
+    return provider_oauth.authorize_redirect(redirect_uri)
 
-# Get additional data (brand, fabric, purchase date, original and target currency) from the form
-brand = request.form.get('brand')
-fabric = request.form.get('fabric')
-purchase_date = request.form.get('purchase_date')
-original_currency = request.form.get('original_currency', 'USD') # Default to USD if not provided
-target_currency = request.form.get('target_currency', 'USD') # Default to USD if not provided
+@app.route('/google/callback')
+def google_callback():
+    token = oauth.google.authorize_access_token()
+    user_info = oauth.google.parse_id_token(token)
+    session['user'] = user_info
+    return redirect('/dashboard')
 
-# Get original and current prices from the form
-original_price = float(request.form.get('original_price'))
-current_price = float(request.form.get('current_price'))
+@app.route('/facebook/callback')
+def facebook_callback():
+    token = oauth.facebook.authorize_access_token()
+    user_info = oauth.facebook.get('me?fields=id,name,email,picture').json()
+    session['user'] = user_info
+    return redirect('/dashboard')
 
-# Convert the prices to the target currency
-converted_original_price = convert_price(original_price, original_currency, target_currency)
-converted_current_price = convert_price(current_price, original_currency, target_currency)
+@app.route('/twitter/callback')
+def twitter_callback():
+    token = oauth.twitter.authorize_access_token()
+    user_info = oauth.twitter.get('account/verify_credentials.json').json()
+    session['user'] = user_info
+    return redirect('/dashboard')
 
-# Call the depreciation service to calculate depreciation using converted prices
-depreciation_data = calculate_depreciation(filepath, brand, fabric, purchase_date, converted_original_price, converted_current_price)
+@app.route('/dashboard')
+def dashboard():
+    user = session.get('user')
+    if not user:
+        return redirect('/')
+    return f"Hello, {user['name']}!"
 
-# Include the converted prices and currency in the response
-depreciation_data['converted_original_price'] = converted_original_price
-depreciation_data['converted_current_price'] = converted_current_price
-depreciation_data['currency'] = target_currency
+@app.route('/logout')
+def logout():
+    session.pop('user', None)
+    return redirect('/')
 
-return jsonify(depreciation_data)
 
-if __name__ == '__main__':
-# Run the Flask app on localhost, port 5000 (default settings)
-app.run(debug=True)
+# Load the trained model
+wear_and_tear_model = load_model('models/wear_and_tear_model.h5')
+
+@app.route('/predict-wear-tear', methods=['POST'])
+def predict_wear_tear():
+    # Expect an image file in the request
+    if 'image' not in request.files:
+        return jsonify({'error': 'No image file provided'}), 400
+    image_file = request.files['image']
+    image_array = process_image(image_file)
+
+    # Use the loaded model to predict wear and tear
+    prediction = wear_and_tear_model.predict(image_array)
+    predicted_wear_tear = np.argmax(prediction)
+
+    # Get the predicted class index
+    return jsonify({'predicted_wear_tear': int(predicted_wear_tear)})
+@app.route('/convert-currency', methods=['POST'])
+def convert_currency_endpoint():
+    data = request.json
+    amount = data['amount']
+    source_currency = data['source_currency']
+    target_currency = data['target_currency']
+
+    # Call the currency conversion service
+    converted_amount = convert_currency(amount, source_currency, target_currency)
+
+    return jsonify({'converted_amount': converted_amount})
+@app.route('/calculate-depreciation', methods=['POST'])
+def calculate_depreciation_endpoint():
+    data = request.json
+    image_file = request.files['image']
+    brand = data.get('brand')
+    fabric = data.get('fabric')
+    purchase_date = data.get('purchase_date')
+    target_currency = data.get('target_currency')
+    image_array = process_image(image_file)
+
+    # Predict depreciation based on the image and other details
+    depreciation_data = calculate_depreciation( image_array, brand, fabric, purchase_date, target_currency )
+    return jsonify(depreciation_data)
+if __name__ == '__main__': app.run(debug=True)
