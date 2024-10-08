@@ -16,13 +16,13 @@ train_datagen = ImageDataGenerator(
     validation_split=0.2 # Reserve 20% of data for validation
 )
 
-train_generator = train_datagen.flow_from_directory( 'path_to_wear_tear_dataset/train',
+train_generator = train_datagen.flow_from_directory( 'path_to_wear_tear_dataset/heavily_worn',
     target_size=(224, 224), # Resize images batch_size=32,
     class_mode='categorical',
     subset='training' # Subset for training
 )
 
-validation_generator = train_datagen.flow_from_directory( 'path_to_wear_tear_dataset/train',
+validation_generator = train_datagen.flow_from_directory( 'path_to_wear_tear_dataset/heavily_worn',
     target_size=(224, 224),
     batch_size=32,
     class_mode='categorical',

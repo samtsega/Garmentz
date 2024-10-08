@@ -107,6 +107,22 @@ def logout():
     return redirect('/')
 
 
+@app.route('/account-deletion', methods=['POST'])
+def account_deletion():
+    # Check for challenge code for verification
+    challenge_code = request.headers.get('challenge-code')
+
+    # If it's a verification request
+    if challenge_code:
+        # Respond to eBay with the challenge code
+        return jsonify({'challengeResponse': challenge_code}), 200
+
+    # Handle the account deletion notification
+    data = request.json
+    print("Received account deletion notification:", data)
+
+    # Implement logic to delete the user's data from your system here
+
 # Load the trained model
 wear_and_tear_model = load_model('models/wear_and_tear_model.h5')
 

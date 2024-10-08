@@ -33,19 +33,6 @@ def get_original_price(brand, product_id, platform):
             data = response.json()
             return data.get('price', 0)
 
-    elif platform == 'depop':
-        depop_api_url = f"https://api.depop.com/product/{product_id}/price"
-        response = requests.get(depop_api_url)
-        if response.status_code == 200:
-            data = response.json()
-            return data.get('price', 0)
-
-    elif platform == 'vestiaire':
-        vestiaire_api_url = f"https://api.vestiaire.com/product/{product_id}/price"
-        response = requests.get(vestiaire_api_url)
-        if response.status_code == 200:
-            data = response.json()
-            return data.get('price', 0)
 
     elif platform == 'farfetch':
         farfetch_api_url = f"https://api.farfetch.com/product/{product_id}/price" #implement real api url later
@@ -54,19 +41,6 @@ def get_original_price(brand, product_id, platform):
             data = response.json()
             return data.get('price', 0)
 
-    elif platform == 'grailed':
-        grailed_api_url = f"https://api.grailed.com/product/{product_id}/price"  # implement real api url later
-        response = requests.get(grailed_api_url)
-        if response.status_code == 200:
-            data = response.json()
-            return data.get('price', 0)
-
-    elif platform == 'fashionphile':
-        farfetch_api_url = f"https://api.fashionphile.com/product/{product_id}/price"  # implement real api url later
-        response = requests.get(fashionphile_api_url)
-        if response.status_code == 200:
-            data = response.json()
-            return data.get('price', 0)
 
     elif platform == 'saksfifth':
         saksfifth_api_url = f"https://api.saksfifth.com/product/{product_id}/price"  # implement real api url later
@@ -75,12 +49,6 @@ def get_original_price(brand, product_id, platform):
             data = response.json()
             return data.get('price', 0)
 
-    elif platform == 'ssense':
-        ssense_api_url = f"https://api.ssense.com/product/{product_id}/price"  # implement real api url later
-        response = requests.get(ssense_api_url)
-        if response.status_code == 200:
-            data = response.json()
-            return data.get('price', 0)
 
     return 0 # Return 0 if no valid response
 

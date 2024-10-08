@@ -4,6 +4,7 @@ from tf_keras.models import Sequential
 from tf_keras.layers import Dense, Flatten, Dropout
 from tf_keras.preprocessing.image import ImageDataGenerator
 from tf_keras.optimizers import Adam
+import pandas as pd
 
 # Load the pre-trained VGG16 model, excluding the top layers (we'll add our own layers)
 base_model = VGG16(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
@@ -18,7 +19,7 @@ model = Sequential([
     Dense(256, activation='relu'), # Add a fully connected layer with 256 units
     Dropout(0.5), # Add dropout to prevent overfitting
     Dense(128, activation='relu'), # Another dense layer
-    Dense(3, activation='softmax') # Output layer with softmax for 3 wear and tear classes (new, slightly worn, heavily worn)
+    Dense(3, activation='softmax') # Output layer with softmax for 3 wear and tear classes (heavily_worn, slightly worn, heavily worn)
 ])
 
 # Compile the model
@@ -36,7 +37,7 @@ val_datagen = ImageDataGenerator(rescale=1.0 / 255) # Just rescale validation da
 
 # Load training data from the dataset folder
 train_generator = train_datagen.flow_from_directory(
-    'dataset/train',
+    'dataset/heavily_worn',
     target_size=(224, 224),
     batch_size=32,
     class_mode='categorical'

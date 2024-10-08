@@ -6,6 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="35c2ec3a-02a5-4fc7-9569-3b24475fa06d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/datasets/train/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/datasets/heavily_worn/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/depop_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/ebay_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/ebay_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/farfetch_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/fashionphile_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/grailed_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/recommendation_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/recommendation_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/ssense_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/vestiare_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/render_template/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/wear_and_tear model/wear_tear_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/wear_and_tear model/wear_tear_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/stores/recommendation_store/recommendation_store.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/stores/recommendation_store/recommendation_store.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,11 +30,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
         <option value="SQL File" />
         <option value="JavaScript File" />
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -37,18 +52,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "samtsega"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;samtsega&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/samtsega/Garmentz",
-    "accountId": "40ac9825-e839-4fe1-b3a6-df73577aa280"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/samtsega/Garmentz&quot;,
+    &quot;accountId&quot;: &quot;40ac9825-e839-4fe1-b3a6-df73577aa280&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -63,35 +78,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Python.classifer # Pretrained model for image recognition using MobileNetV2.executor": "Debug",
-    "Python.data_generator.executor": "Run",
-    "Python.depreciation_service.executor": "Run",
-    "Python.model.executor": "Run",
-    "Python.models.executor": "Debug",
-    "Python.train.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Shell Script.flutter.executor": "Run",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "aDefault",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.classifer # Pretrained model for image recognition using MobileNetV2.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.data_generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.depreciation_service.executor&quot;: &quot;Run&quot;,
+    &quot;Python.model.executor&quot;: &quot;Run&quot;,
+    &quot;Python.models.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.train.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Shell Script.flutter.executor&quot;: &quot;Run&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mongo"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/backend/templates" />
@@ -271,7 +286,8 @@
       <workItem from="1727402309791" duration="18968000" />
       <workItem from="1727534571917" duration="19503000" />
       <workItem from="1727660264662" duration="68443000" />
-      <workItem from="1728067823215" duration="4289000" />
+      <workItem from="1728067823215" duration="15506000" />
+      <workItem from="1728412252904" duration="608000" />
     </task>
     <servers />
   </component>

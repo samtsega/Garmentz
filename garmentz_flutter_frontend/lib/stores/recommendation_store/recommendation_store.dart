@@ -26,7 +26,7 @@ List<Map<String, String>> response = [
        },
      ];
 
-     // Update the state with new recommendations
+     // Update the state with heavily_worn recommendations
         _recommendations = response;
 
 // Notify listeners about the state update
