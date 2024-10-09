@@ -11,7 +11,7 @@ from wear_tear_model import predict_wear_and_tear
 app = Flask(__name__)
 
 # Import the wear and tear calculation function
-@app.route('/wear_and_tear', methods=['POST'])
+@app.route('/wear_and_tear_model', methods=['POST'])
 def get_wear_and_tear_score():
     # Get the input data (assuming the client sends JSON data)
     data = request.json
