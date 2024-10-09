@@ -57,16 +57,6 @@ def calculate_depreciation_route():
     print(f"Image processed: {image_features}")
 
     # Step 2: Predict wear and tear using the trained model
-    import logging
-
-logging.basicConfig(level=logging.INFO)
-
-def calculate_wear_and_tear(data):
-    # process the data
-    wear_tear_score = # calculate the score based on wear and tear logic
-    logging.info(f"Wear and Tear Score calculated: {score}")
-    return score
-    print(f"Wear and Tear: {wear_tear_score * 100}%")
 
     # Step 3: Fetch the original price from the selected platform using the product_id
     original_price = get_original_price(brand, product_id, platform)
