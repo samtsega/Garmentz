@@ -7,8 +7,19 @@ from currency_conversion import convert_currency
 from image_processing import process_image
 from wear_tear_model import predict_wear_and_tear
 
-# Import the wear and tear prediction function
 app = Flask(__name__)
+
+# Import the wear and tear calculation function
+@app.route('/wear_and_tear', methods=['POST'])
+def get_wear_and_tear_score():
+    # Get the input data (assuming the client sends JSON data)
+    data = request.json
+    
+    # Calculate the wear and tear score using the imported function
+    score = calculate_wear_and_tear(data)
+
+    # Return the score as a JSON response
+    return jsonify({'wear_and_tear_score': score})
 
 # Configure the upload folder for images
 app.config['UPLOAD_FOLDER'] = 'path_to_your_upload_directory'
