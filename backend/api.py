@@ -1,5 +1,6 @@
 import os
 import requests
+import logging
 from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
 from depreciation_service import calculate_depreciation
