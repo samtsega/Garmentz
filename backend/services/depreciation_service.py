@@ -71,7 +71,7 @@ def calculate_depreciation(image_path, brand=None, fabric=None, purchase_date=No
         'depreciation_rate': final_depreciation_rate,
         'current_value': current_value,
         'estimated_age': estimated_age,
-        'wear_and_tear': wear_tear_score,
+        'predict_wear_and_tear': wear_tear_score,
         'brand': brand,
         'fabric': fabric
     }
