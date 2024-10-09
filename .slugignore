@@ -1,0 +1,9 @@
+# Exclude unnecessary files
+node_modules/
+.git/
+docs/
+tests/
+coverage/
+.env
+*.log
+*.md
