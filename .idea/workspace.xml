@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35c2ec3a-02a5-4fc7-9569-3b24475fa06d" name="Changes" comment="pushh">
-      <change afterPath="$PROJECT_DIR$/.slugignore" afterDir="false" />
+    <list default="true" id="35c2ec3a-02a5-4fc7-9569-3b24475fa06d" name="Changes" comment="slug too large - lessened dependencies">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -276,7 +274,7 @@
       <workItem from="1727534571917" duration="19503000" />
       <workItem from="1727660264662" duration="68443000" />
       <workItem from="1728067823215" duration="15506000" />
-      <workItem from="1728412252904" duration="3882000" />
+      <workItem from="1728412252904" duration="4468000" />
     </task>
     <task id="LOCAL-00001" summary="pushh">
       <option name="closed" value="true" />
@@ -286,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728415148125</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="slug too large - lessened dependencies">
+      <option name="closed" value="true" />
+      <created>1728446678799</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728446678799</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +300,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="pushh" />
-    <option name="LAST_COMMIT_MESSAGE" value="pushh" />
+    <MESSAGE value="slug too large - lessened dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="slug too large - lessened dependencies" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
