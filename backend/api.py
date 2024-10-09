@@ -1,4 +1,4 @@
-iimport os
+import os
 import requests
 from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
@@ -19,20 +19,12 @@ def get_original_price(brand, product_id, platform):
     Args: brand (str): The brand of the clothing item. product_id (str): The unique product identifier (SKU or item number).
     platform (str): The platform from which to retrieve the price (Amazon, eBay, Depop, etc.).
     Returns: float: The original price of the item. """
-    if platform == 'amazon':
-        amazon_api_url = f"https://api.amazon.com/product/{product_id}/price"
-        response = requests.get(amazon_api_url)
-        if response.status_code == 200:
-            data = response.json()
-            return data.get('price', 0)
-
-    elif platform == 'ebay':
+    if platform == 'ebay':
         ebay_api_url = f"https://api.ebay.com/item/{product_id}/price"
         response = requests.get(ebay_api_url)
         if response.status_code == 200:
             data = response.json()
             return data.get('price', 0)
-
 
     return 0 # Return 0 if no valid response
 
