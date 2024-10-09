@@ -1,4 +1,4 @@
-import os
+iimport os
 import requests
 from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
@@ -29,22 +29,6 @@ def get_original_price(brand, product_id, platform):
     elif platform == 'ebay':
         ebay_api_url = f"https://api.ebay.com/item/{product_id}/price"
         response = requests.get(ebay_api_url)
-        if response.status_code == 200:
-            data = response.json()
-            return data.get('price', 0)
-
-
-    elif platform == 'farfetch':
-        farfetch_api_url = f"https://api.farfetch.com/product/{product_id}/price" #implement real api url later
-        response = requests.get(farfetch_api_url)
-        if response.status_code == 200:
-            data = response.json()
-            return data.get('price', 0)
-
-
-    elif platform == 'saksfifth':
-        saksfifth_api_url = f"https://api.saksfifth.com/product/{product_id}/price"  # implement real api url later
-        response = requests.get(saksfifth_api_url)
         if response.status_code == 200:
             data = response.json()
             return data.get('price', 0)
