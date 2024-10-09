@@ -91,7 +91,7 @@ def calculate_depreciation_route():
         'converted_value': converted_value,
         'currency': target_currency,
         'estimated_age': depreciation_result['estimated_age'],
-        'wear_and_tear': wear_tear_score,
+        'predict_wear_and_tear': wear_tear_score,
         'brand': brand,
         'fabric': fabric,
         'platform': platform }
