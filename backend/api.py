@@ -37,9 +37,6 @@ def get_original_price(brand, product_id, platform):
     return 0 # Return 0 if no valid response
 
 
-
-
-
 @app.route('/calculate_depreciation', methods=['POST'])
 def calculate_depreciation_route():
     """
