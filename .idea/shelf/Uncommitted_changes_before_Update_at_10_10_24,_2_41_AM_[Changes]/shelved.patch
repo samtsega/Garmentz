@@ -1,0 +1,166 @@
+Index: heroku.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/heroku.yml b/heroku.yml
+new file mode 100644
+--- /dev/null	(date 1728540017657)
++++ b/heroku.yml	(date 1728540017657)
+@@ -0,0 +1,6 @@
++build:
++  docker:
++    web: Dockerfile  # Points to the Dockerfile to use for building the image
++
++run:
++  web: gunicorn app:app  # How to run your Flask app
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_10_9_24__10_50_PM__Changes_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_10_9_24__10_50_PM__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_10_9_24__10_50_PM__Changes_.xml
+new file mode 100644
+--- /dev/null	(date 1728529258139)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_10_9_24__10_50_PM__Changes_.xml	(date 1728529258139)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Update_at_10_9_24,_10_50_PM_[Changes]" date="1728528636449" recycled="true" deleted="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_9_24,_10_50_PM_[Changes]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Update at 10/9/24, 10:50 PM [Changes]" />
++</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_10_9_24,_10_50_PM_[Changes]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_10_9_24,_10_50_PM_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_10_9_24,_10_50_PM_[Changes]/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1728528635130)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_10_9_24,_10_50_PM_[Changes]/shelved.patch	(date 1728528635130)
+@@ -0,0 +1,110 @@
++Index: backend/api.py
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>import os\nimport requests\nfrom flask import Flask, request, jsonify\nfrom werkzeug.utils import secure_filename\nfrom depreciation_service import calculate_depreciation\nfrom currency_conversion import convert_currency\nfrom image_processing import process_image\nfrom wear_tear_model import predict_wear_and_tear\n\n# Import the wear and tear prediction function\napp = Flask(__name__)\n\n# Configure the upload folder for images\napp.config['UPLOAD_FOLDER'] = 'path_to_your_upload_directory'\n\n# Helper function to get the original price of the clothing item from different platforms\ndef get_original_price(brand, product_id, platform):\n    \"\"\" This function calls external APIs to get the original price of the item based on the platform.\n    Args: brand (str): The brand of the clothing item. product_id (str): The unique product identifier (SKU or item number).\n    platform (str): The platform from which to retrieve the price (Amazon, eBay, Depop, etc.).\n    Returns: float: The original price of the item. \"\"\"\n    if platform == 'amazon':\n        amazon_api_url = f\"https://api.amazon.com/product/{product_id}/price\"\n        response = requests.get(amazon_api_url)\n        if response.status_code == 200:\n            data = response.json()\n            return data.get('price', 0)\n\n    elif platform == 'ebay':\n        ebay_api_url = f\"https://api.ebay.com/item/{product_id}/price\"\n        response = requests.get(ebay_api_url)\n        if response.status_code == 200:\n            data = response.json()\n            return data.get('price', 0)\n\n\n    elif platform == 'farfetch':\n        farfetch_api_url = f\"https://api.farfetch.com/product/{product_id}/price\" #implement real api url later\n        response = requests.get(farfetch_api_url)\n        if response.status_code == 200:\n            data = response.json()\n            return data.get('price', 0)\n\n\n    elif platform == 'saksfifth':\n        saksfifth_api_url = f\"https://api.saksfifth.com/product/{product_id}/price\"  # implement real api url later\n        response = requests.get(saksfifth_api_url)\n        if response.status_code == 200:\n            data = response.json()\n            return data.get('price', 0)\n\n\n    return 0 # Return 0 if no valid response\n\n\n\n\n\n@app.route('/calculate_depreciation', methods=['POST'])\ndef calculate_depreciation_route():\n    \"\"\"\n    API route to handle the full workflow:\n    1. Image Processing to extract features\n    2. API Requests to fetch original prices\n    3. Depreciation Calculation with wear and tear model\n    4. Currency Conversion \"\"\"\n\n    # Handle form data from the request\n    brand = request.form.get('brand')\n    fabric = request.form.get('fabric')\n    purchase_date = request.form.get('purchase_date')\n    platform = request.form.get('platform') # Example: Amazon, eBay, Depop, Vestiaire\n    product_id = request.form.get('product_id')\n    target_currency = request.form.get('target_currency', 'USD')\n\n    # Handle the image file upload\n    file = request.files['image']\n    filename = secure_filename(file.filename)\n    filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)\n    file.save(filepath)\n\n    # Step 1: Process the uploaded image\n    image_features = process_image(filepath) # Call your image processing function\n    print(f\"Image processed: {image_features}\")\n\n    # Step 2: Predict wear and tear using the trained model\n    wear_tear_score = predict_wear_and_tear(filepath) # Predict wear and tear percentage\n    print(f\"Wear and Tear: {wear_tear_score * 100}%\")\n\n    # Step 3: Fetch the original price from the selected platform using the product_id\n    original_price = get_original_price(brand, product_id, platform)\n    print(f\"Original Price: {original_price}\")\n\n    # Step 4: Calculate depreciation based on age, brand, fabric, and predicted wear and tear\n    depreciation_result = calculate_depreciation(filepath, brand, fabric, purchase_date, wear_tear_score)\n    current_value_in_usd = depreciation_result['current_value']\n    print(f\"Current Value (USD): {current_value_in_usd}\")\n\n    # Step 5: Convert the current value into the target currency\n    converted_value = convert_currency(current_value_in_usd, 'USD', target_currency)\n    print(f\"Converted Value ({target_currency}): {converted_value}\")\n\n    # Prepare the final result to return as a response\n    result = {\n        'original_price': original_price,\n        'depreciation_rate': depreciation_result['depreciation_rate'],\n        'current_value': current_value_in_usd,\n        'converted_value': converted_value,\n        'currency': target_currency,\n        'estimated_age': depreciation_result['estimated_age'],\n        'wear_and_tear': wear_tear_score,\n        'brand': brand,\n        'fabric': fabric,\n        'platform': platform }\n\n    return jsonify(result)\n\nif __name__ == '__main__': app.run(debug=True)\n
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/backend/api.py b/backend/api.py
++--- a/backend/api.py	(revision 84c19af6c880460eeedf10ede610711bda141ca7)
+++++ b/backend/api.py	(date 1728447739697)
++@@ -2,10 +2,10 @@
++ import requests
++ from flask import Flask, request, jsonify
++ from werkzeug.utils import secure_filename
++-from depreciation_service import calculate_depreciation
++-from currency_conversion import convert_currency
++-from image_processing import process_image
++-from wear_tear_model import predict_wear_and_tear
+++from backend.services.depreciation_service import calculate_depreciation
+++from backend.utils.currency_conversions import convert_currency
+++from backend.utils.image_processing import process_image
+++from backend.models.wear_and_tear models import predict_wear_and_tear
++ 
++ # Import the wear and tear prediction function
++ app = Flask(__name__)
++Index: .idea/workspace.xml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"35c2ec3a-02a5-4fc7-9569-3b24475fa06d\" name=\"Changes\" comment=\"slug too large - lessened dependencies\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/requirements.txt\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/requirements.txt\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"SQL File\" />\n        <option value=\"JavaScript File\" />\n        <option value=\"Python Script\" />\n        <option value=\"HTML File\" />\n        <option value=\"Jupyter Notebook\" />\n        <option value=\"Dockerfile\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"FlaskConsoleOptions\" custom-start-script=\"import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\\nApp: %s [%s]\\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))\">\n    <envs>\n      <env key=\"FLASK_APP\" value=\"app\" />\n    </envs>\n    <option name=\"myCustomStartScript\" value=\"import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\\nApp: %s [%s]\\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))\" />\n    <option name=\"myEnvs\">\n      <map>\n        <entry key=\"FLASK_APP\" value=\"app\" />\n      </map>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;samtsega&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/samtsega/Garmentz&quot;,\n    &quot;accountId&quot;: &quot;40ac9825-e839-4fe1-b3a6-df73577aa280&quot;\n  }\n}</component>\n  <component name=\"ProblemsViewState\">\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 4\n}</component>\n  <component name=\"ProjectId\" id=\"2mPZZUi23FpmmbVCnLKQiDaW0l9\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"DefaultHtmlFileTemplate\": \"HTML File\",\n    \"Python.classifer # Pretrained model for image recognition using MobileNetV2.executor\": \"Debug\",\n    \"Python.data_generator.executor\": \"Run\",\n    \"Python.depreciation_service.executor\": \"Run\",\n    \"Python.model.executor\": \"Run\",\n    \"Python.models.executor\": \"Debug\",\n    \"Python.train.executor\": \"Run\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"Shell Script.flutter.executor\": \"Run\",\n    \"dart.analysis.tool.window.visible\": \"false\",\n    \"git-widget-placeholder\": \"master\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"run.code.analysis.last.selected.profile\": \"aDefault\",\n    \"settings.editor.selected.configurable\": \"org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  },\n  \"keyToStringList\": {\n    \"DatabaseDriversLRU\": [\n      \"mongo\"\n    ]\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/backend/templates\" />\n      <recent name=\"$PROJECT_DIR$\" />\n      <recent name=\"$PROJECT_DIR$/backend/templates # OAUTH \" />\n      <recent name=\"$PROJECT_DIR$/backend\" />\n      <recent name=\"$PROJECT_DIR$/backend/wear_and_tear model\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"Python.train\">\n    <configuration name=\"classifer\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"GarmentzCode\" />\n      <option name=\"ENV_FILES\" value=\"\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/backend/models\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/backend/models/classifer\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"data_generator\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"GarmentzCode\" />\n      <option name=\"ENV_FILES\" value=\"\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/backend/models\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/backend/models/data_generator.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"depreciation_service\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"GarmentzCode\" />\n      <option name=\"ENV_FILES\" value=\"\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/backend/api_services\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/backend/api_services/depreciation_service.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"model\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"GarmentzCode\" />\n      <option name=\"ENV_FILES\" value=\"\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/backend/models\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/backend/models/model.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"train\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"GarmentzCode\" />\n      <option name=\"ENV_FILES\" value=\"\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/backend/datasets/train\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/backend/train.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"flutter\" type=\"ShConfigurationType\" singleton=\"false\">\n      <option name=\"SCRIPT_TEXT\" value=\"\" />\n      <option name=\"INDEPENDENT_SCRIPT_PATH\" value=\"true\" />\n      <option name=\"SCRIPT_PATH\" value=\"$USER_HOME$/Downloads/flutter/bin/flutter\" />\n      <option name=\"SCRIPT_OPTIONS\" value=\"\" />\n      <option name=\"INDEPENDENT_SCRIPT_WORKING_DIRECTORY\" value=\"true\" />\n      <option name=\"SCRIPT_WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/../..\" />\n      <option name=\"INDEPENDENT_INTERPRETER_PATH\" value=\"true\" />\n      <option name=\"INTERPRETER_PATH\" value=\"/usr/bin\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"zsh\" />\n      <option name=\"EXECUTE_IN_TERMINAL\" value=\"true\" />\n      <option name=\"EXECUTE_SCRIPT_FILE\" value=\"true\" />\n      <envs />\n      <method v=\"2\" />\n    </configuration>\n    <list>\n      <item itemvalue=\"Python.data_generator\" />\n      <item itemvalue=\"Python.depreciation_service\" />\n      <item itemvalue=\"Python.model\" />\n      <item itemvalue=\"Python.train\" />\n      <item itemvalue=\"Python.classifer\" />\n      <item itemvalue=\"Shell Script.flutter\" />\n    </list>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Python.train\" />\n        <item itemvalue=\"Python.data_generator\" />\n        <item itemvalue=\"Python.model\" />\n        <item itemvalue=\"Python.depreciation_service\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.22855.92\" />\n        <option value=\"bundled-python-sdk-b068d85d1acf-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.22855.92\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"35c2ec3a-02a5-4fc7-9569-3b24475fa06d\" name=\"Changes\" comment=\"\" />\n      <created>1726980227279</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1726980227279</updated>\n      <workItem from=\"1726980230671\" duration=\"381000\" />\n      <workItem from=\"1726981248813\" duration=\"15180000\" />\n      <workItem from=\"1727029801461\" duration=\"45431000\" />\n      <workItem from=\"1727402309791\" duration=\"18968000\" />\n      <workItem from=\"1727534571917\" duration=\"19503000\" />\n      <workItem from=\"1727660264662\" duration=\"68443000\" />\n      <workItem from=\"1728067823215\" duration=\"15506000\" />\n      <workItem from=\"1728412252904\" duration=\"4468000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"pushh\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728415148125</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728415148125</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"slug too large - lessened dependencies\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728446678799</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728446678799</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"3\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"pushh\" />\n    <MESSAGE value=\"slug too large - lessened dependencies\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"slug too large - lessened dependencies\" />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <line-breakpoint enabled=\"true\" suspend=\"THREAD\" type=\"python-line\">\n          <url>file://$PROJECT_DIR$/backend/services/depreciation_service.py</url>\n          <line>98</line>\n          <option name=\"timeStamp\" value=\"1\" />\n        </line-breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n  </component>\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\n    <SUITE FILE_PATH=\"coverage/GarmentzCode$classifer___Pretrained_model_for_image_recognition_using_MobileNetV2.coverage\" NAME=\"classifer # Pretrained model for image recognition using MobileNetV2 Coverage Results\" MODIFIED=\"1726995048542\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/backend/models\" />\n    <SUITE FILE_PATH=\"coverage/GarmentzCode$model.coverage\" NAME=\"model Coverage Results\" MODIFIED=\"1727768719196\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/backend/models\" />\n    <SUITE FILE_PATH=\"coverage/GarmentzCode$depreciation_service.coverage\" NAME=\"depreciation_service Coverage Results\" MODIFIED=\"1727660629067\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/backend/api_services\" />\n    <SUITE FILE_PATH=\"coverage/GarmentzCode$models.coverage\" NAME=\"models Coverage Results\" MODIFIED=\"1726982555913\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/models # Pre-trained ML models\" />\n    <SUITE FILE_PATH=\"coverage/GarmentzCode$train.coverage\" NAME=\"train Coverage Results\" MODIFIED=\"1727801897302\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/backend/datasets/train\" />\n    <SUITE FILE_PATH=\"coverage/GarmentzCode$data_generator.coverage\" NAME=\"data_generator Coverage Results\" MODIFIED=\"1727768745849\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/backend/models\" />\n  </component>\n</project>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++diff --git a/.idea/workspace.xml b/.idea/workspace.xml
++--- a/.idea/workspace.xml	(revision 84c19af6c880460eeedf10ede610711bda141ca7)
+++++ b/.idea/workspace.xml	(date 1728528629677)
++@@ -5,8 +5,12 @@
++   </component>
++   <component name="ChangeListManager">
++     <list default="true" id="35c2ec3a-02a5-4fc7-9569-3b24475fa06d" name="Changes" comment="slug too large - lessened dependencies">
+++      <change afterPath="$PROJECT_DIR$/backend/__init__.py" afterDir="false" />
+++      <change afterPath="$PROJECT_DIR$/backend/models/wear_and_tear model/__init__.py" afterDir="false" />
++       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/backend/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api.py" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/backend/wear_and_tear model/depreciation_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/wear_and_tear model/depreciation_model.py" afterDir="false" />
+++      <change beforePath="$PROJECT_DIR$/backend/wear_and_tear model/wear_tear_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/wear_and_tear model/wear_tear_model.py" afterDir="false" />
++     </list>
++     <option name="SHOW_DIALOG" value="false" />
++     <option name="HIGHLIGHT_CONFLICTS" value="true" />
++@@ -18,10 +22,10 @@
++       <list>
++         <option value="SQL File" />
++         <option value="JavaScript File" />
++-        <option value="Python Script" />
++         <option value="HTML File" />
++         <option value="Jupyter Notebook" />
++         <option value="Dockerfile" />
+++        <option value="Python Script" />
++       </list>
++     </option>
++   </component>
++@@ -96,11 +100,11 @@
++ }]]></component>
++   <component name="RecentsManager">
++     <key name="MoveFile.RECENT_KEYS">
+++      <recent name="$PROJECT_DIR$/backend/models" />
++       <recent name="$PROJECT_DIR$/backend/templates" />
++       <recent name="$PROJECT_DIR$" />
++       <recent name="$PROJECT_DIR$/backend/templates # OAUTH " />
++       <recent name="$PROJECT_DIR$/backend" />
++-      <recent name="$PROJECT_DIR$/backend/wear_and_tear model" />
++     </key>
++   </component>
++   <component name="RunManager" selected="Python.train">
++@@ -274,7 +278,7 @@
++       <workItem from="1727534571917" duration="19503000" />
++       <workItem from="1727660264662" duration="68443000" />
++       <workItem from="1728067823215" duration="15506000" />
++-      <workItem from="1728412252904" duration="4468000" />
+++      <workItem from="1728412252904" duration="5559000" />
++     </task>
++     <task id="LOCAL-00001" summary="pushh">
++       <option name="closed" value="true" />
++@@ -292,7 +296,15 @@
++       <option name="project" value="LOCAL" />
++       <updated>1728446678799</updated>
++     </task>
++-    <option name="localTasksCounter" value="3" />
+++    <task id="LOCAL-00003" summary="slug too large - lessened dependencies">
+++      <option name="closed" value="true" />
+++      <created>1728447300123</created>
+++      <option name="number" value="00003" />
+++      <option name="presentableId" value="LOCAL-00003" />
+++      <option name="project" value="LOCAL" />
+++      <updated>1728447300123</updated>
+++    </task>
+++    <option name="localTasksCounter" value="4" />
++     <servers />
++   </component>
++   <component name="TypeScriptGeneratedFilesManager">
++diff --git a/backend/wear_and_tear model/depreciation_model.py b/backend/models/wear_and_tear model/depreciation_model.py
++rename from backend/wear_and_tear model/depreciation_model.py
++rename to backend/models/wear_and_tear model/depreciation_model.py
++diff --git a/backend/models/wear_and_tear model/__init__.py b/backend/models/wear_and_tear model/__init__.py
++new file mode 100644
++diff --git a/backend/wear_and_tear model/wear_tear_model.py b/backend/models/wear_and_tear model/wear_tear_model.py
++rename from backend/wear_and_tear model/wear_tear_model.py
++rename to backend/models/wear_and_tear model/wear_tear_model.py
++diff --git a/backend/__init__.py b/backend/__init__.py
++new file mode 100644
+Index: Procfile
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Procfile b/Procfile
+new file mode 100644
+--- /dev/null	(date 1728539784981)
++++ b/Procfile	(date 1728539784981)
+@@ -0,0 +1,5 @@
++web: gunicorn app:app
++
++
++
++
