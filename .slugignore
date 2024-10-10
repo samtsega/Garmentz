@@ -1,10 +1,20 @@
 # Exclude unnecessary files
 node_modules/
 .git/
-docs/
-tests/
-coverage/
-.env
-*.log
-*.md
+.Python
+.env/
 .venv2/
+ENV/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
