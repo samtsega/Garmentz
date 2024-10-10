@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35c2ec3a-02a5-4fc7-9569-3b24475fa06d" name="Changes" comment="slug too large - lessened dependencies">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/GarmentzCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GarmentzCode.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/render_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/render_templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/requirements.backend.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/wear_and_tear model/depreciation_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/depreciation_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/wear_and_tear model/wear_tear_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/wear_tear_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/wear_tear_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/wear_tear_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +39,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -93,7 +88,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.notebooks.jupyter.connections.configuration.JupyterServerConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -283,7 +278,9 @@
       <workItem from="1727660264662" duration="68443000" />
       <workItem from="1728067823215" duration="15506000" />
       <workItem from="1728412252904" duration="7112000" />
-      <workItem from="1728538937704" duration="156000" />
+      <workItem from="1728538937704" duration="470000" />
+      <workItem from="1728539736268" duration="1089000" />
+      <workItem from="1728540919752" duration="1330000" />
     </task>
     <task id="LOCAL-00001" summary="pushh">
       <option name="closed" value="true" />
@@ -309,7 +306,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728447300123</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="slug too large - lessened dependencies">
+      <option name="closed" value="true" />
+      <created>1728539101734</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728539101735</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

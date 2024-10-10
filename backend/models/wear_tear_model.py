@@ -1,130 +1,79 @@
 import os
 import numpy as np
-import tensorflow as tf
-from tensorflow.keras import layers, models
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-import json
+import tf_keras
+from tf_keras.models import Sequential
+from tf_keras.layers import Dense, Flatten, Dropout
+from tf_keras.applications import VGG16
+from tf_keras.preprocessing.image import ImageDataGenerator
+from tf_keras.optimizers import Adam
 
-# 1. Load and Preprocess Data
-def load_wear_and_tear_data(data_dir, image_size=(128, 128)):
-    """
-    Loads image data and labels from the dataset directories.
-    Returns the images and labels ready for model training.
-    """
-    categories = ['heavily_worn', 'lightly_worn', 'new']
-    data = []
-    labels = []
+# Ensure the TensorFlow version is correct
+print(f"Using TensorFlow version: {tf_keras.__version__}")
 
-    for category in categories:
-        category_path = os.path.join(data_dir, category)
-        label = categories.index(category)  # Assign label 0 for heavily worn, 1 for lightly worn, and 2 for new
-        
-        for filename in os.listdir(category_path):
-            file_path = os.path.join(category_path, filename)
-            # If working with images, load and resize them
-            image = tf.keras.preprocessing.image.load_img(file_path, target_size=image_size)
-            image = tf.keras.preprocessing.image.img_to_array(image)
-            image = image / 255.0  # Normalize pixel values
+# 1. Load the pretrained VGG16 model, excluding the top layers
+base_model = VGG16(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
 
-            # Add image and corresponding label to the dataset
-            data.append(image)
-            labels.append(label)
+# 2. Freeze the base model to prevent its weights from updating during training
+base_model.trainable = False
 
-    # Convert lists to numpy arrays
-    return np.array(data), np.array(labels)
+# 3. Create a new model and add custom layers on top of the pretrained model
+model = Sequential([
+    base_model,              # Add the VGG16 base model
+    Flatten(),               # Flatten the output to feed into fully connected layers
+    Dense(256, activation='relu'),  # Dense layer with 256 units and ReLU activation
+    Dropout(0.5),            # Dropout layer to reduce overfitting
+    Dense(128, activation='relu'),  # Another dense layer
+    Dense(1, activation='sigmoid')   # Output layer for wear and tear score (0 to 1)
+])
 
-# 2. Build the Model (CNN for image data)
-def build_wear_and_tear_model(input_shape):
-    """
-    Builds and returns a CNN model for wear and tear classification.
-    """
-    model = models.Sequential()
+# 4. Compile the model with Adam optimizer and binary crossentropy for the loss
+model.compile(optimizer=Adam(learning_rate=0.0001), loss='binary_crossentropy', metrics=['mae'])
 
-    # Convolutional layers
-    model.add(layers.Conv2D(32, (3, 3), activation='relu', input_shape=input_shape))
-    model.add(layers.MaxPooling2D((2, 2)))
+# 5. Set up ImageDataGenerator for loading and augmenting the images
+train_datagen = ImageDataGenerator(
+    rescale=1.0 / 255,        # Normalize pixel values
+    shear_range=0.2,
+    zoom_range=0.2,
+    horizontal_flip=True
+)
 
-    model.add(layers.Conv2D(64, (3, 3), activation='relu'))
-    model.add(layers.MaxPooling2D((2, 2)))
+val_datagen = ImageDataGenerator(rescale=1.0 / 255)  # Only normalize validation data
 
-    model.add(layers.Conv2D(128, (3, 3), activation='relu'))
-    model.add(layers.MaxPooling2D((2, 2)))
+# 6. Load the training and validation data from directories
+train_generator = train_datagen.flow_from_directory(
+    'path_to_your_dataset/train',          # Update with actual dataset path
+    target_size=(224, 224),                # Match the input size expected by VGG16
+    batch_size=32,
+    class_mode='binary'                     # 'binary' for wear and tear score (0 or 1)
+)
 
-    # Flatten and fully connected layers
-    model.add(layers.Flatten())
-    model.add(layers.Dense(128, activation='relu'))
-    model.add(layers.Dense(3, activation='softmax'))  # 3 output classes (heavily worn, lightly worn, new)
+validation_generator = val_datagen.flow_from_directory(
+    'path_to_your_dataset/validation',     # Update with actual dataset path
+    target_size=(224, 224),
+    batch_size=32,
+    class_mode='binary'                     # 'binary' for wear and tear score
+)
 
-    # Compile the model
-    model.compile(optimizer='adam',
-                  loss='sparse_categorical_crossentropy',
-                  metrics=['accuracy'])
+# 7. Train the model
+model.fit(
+    train_generator,
+    steps_per_epoch=train_generator.samples // train_generator.batch_size,
+    validation_data=validation_generator,
+    validation_steps=validation_generator.samples // validation_generator.batch_size,
+    epochs=10  # Adjust epochs based on your needs
+)
 
-    return model
+# 8. Save the trained model to an .h5 file
+model.save('wear_and_tear_model.h5')
+print("Model saved as wear_and_tear_model.h5")
 
-# 3. Train the Model
-def train_wear_and_tear_model(data_dir):
-    """
-    Loads data, builds the model, and trains it.
-    """
-    # Load and preprocess data
-    image_size = (128, 128)  # Resize all images to 128x128
-    X, y = load_wear_and_tear_data(data_dir, image_size=image_size)
-
-    # Split data into training and validation sets
-    X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
-
-    # Define data augmentation (to prevent overfitting)
-    datagen = ImageDataGenerator(
-        rotation_range=20,
-        width_shift_range=0.2,
-        height_shift_range=0.2,
-        horizontal_flip=True
-    )
-
-    # Build the CNN model
-    model = build_wear_and_tear_model(input_shape=(image_size[0], image_size[1], 3))  # 3 for RGB channels
-
-    # Train the model
-    history = model.fit(datagen.flow(X_train, y_train, batch_size=32),
-                        validation_data=(X_val, y_val),
-                        epochs=10)
-
-    # Save the trained model to a file
-    model.save('wear_and_tear_model.h5')
-
-    return model
-
-# 4. Predict Wear and Tear
+# Function to predict wear and tear score for a new image
 def predict_wear_and_tear(image_path):
-    """
-    Loads the trained model and predicts wear and tear level for a given image.
-    """
-    # Load the saved model
-    model = tf.keras.models.load_model('wear_and_tear_model.h5')
+    """Predict wear and tear score for a given image."""
+    img = tf_keras.preprocessing.image.load_img(image_path, target_size=(224, 224))
+    img_array = tf_keras.preprocessing.image.img_to_array(img)
+    img_array = np.expand_dims(img_array, axis=0)  # Add batch dimension
+    img_array = img_array / 255.0  # Normalize pixel values
 
-    # Preprocess the input image
-    image_size = (128, 128)
-    image = tf.keras.preprocessing.image.load_img(image_path, target_size=image_size)
-    image = tf.keras.preprocessing.image.img_to_array(image) / 255.0  # Normalize pixel values
-    image = np.expand_dims(image, axis=0)  # Add batch dimension
-
-    # Predict the wear and tear category
-    prediction = model.predict(image)
-    wear_and_tear_categories = ['heavily worn', 'lightly worn', 'new']
-
-    return wear_and_tear_categories[np.argmax(prediction)]
-
-# 5. Example Usage
-if __name__ == "__main__":
-    # Example data directory path (replace with your actual dataset path)
-    data_dir = '/path/to/data'
-
-    # Train the model
-    train_wear_and_tear_model(data_dir)
-
-    # Predict wear and tear on a new item (replace with actual image path)
-    prediction = predict_wear_and_tear('/path/to/new/image.jpg')
-    print(f"Predicted wear and tear category: {prediction}")
+    score = model.predict(img_array)  # Get the wear and tear score
+    return score[0][0]  # Return the score
