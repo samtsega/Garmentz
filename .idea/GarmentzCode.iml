@@ -71,7 +71,7 @@
       <excludeFolder url="file://$MODULE_DIR$/garmentz_flutter_frontend/windows/flutter/ephemeral/.plugin_symlinks/image_picker_windows/example/build" />
       <excludeFolder url="file://$MODULE_DIR$/.venv2" />
     </content>
-    <orderEntry type="jdk" jdkName="GarmentzCode" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.12 (GarmentzCode)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PackageRequirementsSettings">
