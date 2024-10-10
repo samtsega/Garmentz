@@ -7,20 +7,7 @@ from dotenv import load_dotenv
 from utils.image_processing import process_image
 from utils.currency_conversions import convert_currency
 from services.depreciation_service import calculate_depreciation
-import pdfkit
 
-# Set up the path for wkhtmltopdf (needed for Heroku)
-if 'DYNO' in os.environ:  # Checks if the app is running on Heroku
-    path_to_wkhtmltopdf = '/app/bin/wkhtmltopdf'
-    config = pdfkit.configuration(wkhtmltopdf=path_to_wkhtmltopdf)
-else:
-    # Local path to wkhtmltopdf if running locally (change to your local wkhtmltopdf path)
-    path_to_wkhtmltopdf = '/usr/local/bin/wkhtmltopdf'
-    config = pdfkit.configuration(wkhtmltopdf=path_to_wkhtmltopdf)
-
-# Example usage of pdfkit to convert HTML to PDF
-def generate_pdf_from_html(html_content, output_file):
-    pdfkit.from_string(html_content, output_file, configuration=config)
 
 load_dotenv()
 
