@@ -69,8 +69,9 @@
       <excludeFolder url="file://$MODULE_DIR$/garmentz_flutter_frontend/windows/flutter/ephemeral/.plugin_symlinks/image_picker_windows/example/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/garmentz_flutter_frontend/windows/flutter/ephemeral/.plugin_symlinks/image_picker_windows/example/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/garmentz_flutter_frontend/windows/flutter/ephemeral/.plugin_symlinks/image_picker_windows/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/.venv2" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="GarmentzCode" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PackageRequirementsSettings">
