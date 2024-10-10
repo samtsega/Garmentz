@@ -9,4 +9,4 @@ tensorflow
 numpy
 Pillow
 gunicorn  # Optional for production
-
+pdfkit
