@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35c2ec3a-02a5-4fc7-9569-3b24475fa06d" name="Changes" comment="slug too large - lessened dependencies" />
+    <list default="true" id="35c2ec3a-02a5-4fc7-9569-3b24475fa06d" name="Changes" comment="fresh" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -264,11 +264,11 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.classifer" />
       <item itemvalue="Python.data_generator" />
       <item itemvalue="Python.depreciation_service" />
       <item itemvalue="Python.model" />
       <item itemvalue="Python.train" />
-      <item itemvalue="Python.classifer" />
       <item itemvalue="Shell Script.flutter" />
     </list>
     <recent_temporary>
@@ -308,7 +308,7 @@
       <workItem from="1728539736268" duration="1089000" />
       <workItem from="1728540919752" duration="1524000" />
       <workItem from="1728542569936" duration="426000" />
-      <workItem from="1728543338601" duration="856000" />
+      <workItem from="1728543338601" duration="882000" />
     </task>
     <task id="LOCAL-00001" summary="pushh">
       <option name="closed" value="true" />
@@ -398,7 +398,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728543908474</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="slug too large - lessened dependencies">
+      <option name="closed" value="true" />
+      <created>1728544282264</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1728544282265</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fresh">
+      <option name="closed" value="true" />
+      <created>1728544295529</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1728544295529</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +423,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="pushh" />
     <MESSAGE value="slug too large - lessened dependencies" />
-    <option name="LAST_COMMIT_MESSAGE" value="slug too large - lessened dependencies" />
+    <MESSAGE value="fresh" />
+    <option name="LAST_COMMIT_MESSAGE" value="fresh" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/GarmentzCode$classifer___Pretrained_model_for_image_recognition_using_MobileNetV2.coverage" NAME="classifer # Pretrained model for image recognition using MobileNetV2 Coverage Results" MODIFIED="1726995048542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/models" />
