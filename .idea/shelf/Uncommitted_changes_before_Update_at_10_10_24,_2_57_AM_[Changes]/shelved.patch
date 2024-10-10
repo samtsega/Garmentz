@@ -1,0 +1,146 @@
+Index: requirements.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>numpy~=2.1.2\ntf_keras~=2.16.0\nrequests~=2.28.1\nFlask~=3.0.3\nWerkzeug~=3.0.4\nAuthlib~=1.3.2\npython-dotenv~=1.0.1\npandas~=2.2.3\nscikit-learn~=1.5.0\nbotocore~=1.35.34\nfirebase-admin~=6.5.0
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/requirements.txt b/requirements.txt
+--- a/requirements.txt	(revision 6970d14e66e5fe6b30863e4d6ba86bf46ff66177)
++++ b/requirements.txt	(date 1728543446055)
+@@ -8,4 +8,4 @@
+ pandas~=2.2.3
+ scikit-learn~=1.5.0
+ botocore~=1.35.34
+-firebase-admin~=6.5.0
+\ No newline at end of file
++firebase-admin~=6.5.0
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"35c2ec3a-02a5-4fc7-9569-3b24475fa06d\" name=\"Changes\" comment=\"slug too large - lessened dependencies\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"SQL File\" />\n        <option value=\"JavaScript File\" />\n        <option value=\"HTML File\" />\n        <option value=\"Jupyter Notebook\" />\n        <option value=\"Python Script\" />\n        <option value=\"Dockerfile\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"FlaskConsoleOptions\" custom-start-script=\"import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\\nApp: %s [%s]\\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))\">\n    <envs>\n      <env key=\"FLASK_APP\" value=\"app\" />\n    </envs>\n    <option name=\"myCustomStartScript\" value=\"import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\\nApp: %s [%s]\\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))\" />\n    <option name=\"myEnvs\">\n      <map>\n        <entry key=\"FLASK_APP\" value=\"app\" />\n      </map>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"PUSH_AUTO_UPDATE\" value=\"true\" />\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitHubPullRequestSearchHistory\">{\n  &quot;lastFilter&quot;: {\n    &quot;state&quot;: &quot;OPEN&quot;,\n    &quot;assignee&quot;: &quot;samtsega&quot;\n  }\n}</component>\n  <component name=\"GithubPullRequestsUISettings\">{\n  &quot;selectedUrlAndAccountId&quot;: {\n    &quot;url&quot;: &quot;https://github.com/samtsega/Garmentz&quot;,\n    &quot;accountId&quot;: &quot;40ac9825-e839-4fe1-b3a6-df73577aa280&quot;\n  }\n}</component>\n  <component name=\"ProblemsViewState\">\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;associatedIndex&quot;: 4\n}</component>\n  <component name=\"ProjectId\" id=\"2mPZZUi23FpmmbVCnLKQiDaW0l9\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,\n    &quot;Python.classifer # Pretrained model for image recognition using MobileNetV2.executor&quot;: &quot;Debug&quot;,\n    &quot;Python.data_generator.executor&quot;: &quot;Run&quot;,\n    &quot;Python.depreciation_service.executor&quot;: &quot;Run&quot;,\n    &quot;Python.model.executor&quot;: &quot;Run&quot;,\n    &quot;Python.models.executor&quot;: &quot;Debug&quot;,\n    &quot;Python.train.executor&quot;: &quot;Run&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\n    &quot;Shell Script.flutter.executor&quot;: &quot;Run&quot;,\n    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  },\n  &quot;keyToStringList&quot;: {\n    &quot;DatabaseDriversLRU&quot;: [\n      &quot;mongo&quot;\n    ]\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/backend/render_templates\" />\n      <recent name=\"$PROJECT_DIR$/backend\" />\n      <recent name=\"$PROJECT_DIR$\" />\n      <recent name=\"$PROJECT_DIR$/backend/models\" />\n      <recent name=\"$PROJECT_DIR$/backend/templates\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"Python.train\">\n    <configuration name=\"classifer\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"GarmentzCode\" />\n      <option name=\"ENV_FILES\" value=\"\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/backend/models\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/backend/models/classifer\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"data_generator\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"GarmentzCode\" />\n      <option name=\"ENV_FILES\" value=\"\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/backend/models\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/backend/models/data_generator.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"depreciation_service\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"GarmentzCode\" />\n      <option name=\"ENV_FILES\" value=\"\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/backend/api_services\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/backend/api_services/depreciation_service.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"model\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"GarmentzCode\" />\n      <option name=\"ENV_FILES\" value=\"\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/backend/models\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/backend/models/model.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"train\" type=\"PythonConfigurationType\" factoryName=\"Python\" temporary=\"true\" nameIsGenerated=\"true\">\n      <module name=\"GarmentzCode\" />\n      <option name=\"ENV_FILES\" value=\"\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <envs>\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\n      </envs>\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/backend/datasets/train\" />\n      <option name=\"IS_MODULE_SDK\" value=\"true\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"SCRIPT_NAME\" value=\"$PROJECT_DIR$/backend/train.py\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <option name=\"SHOW_COMMAND_LINE\" value=\"false\" />\n      <option name=\"EMULATE_TERMINAL\" value=\"false\" />\n      <option name=\"MODULE_MODE\" value=\"false\" />\n      <option name=\"REDIRECT_INPUT\" value=\"false\" />\n      <option name=\"INPUT_FILE\" value=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration name=\"flutter\" type=\"ShConfigurationType\" singleton=\"false\">\n      <option name=\"SCRIPT_TEXT\" value=\"\" />\n      <option name=\"INDEPENDENT_SCRIPT_PATH\" value=\"true\" />\n      <option name=\"SCRIPT_PATH\" value=\"$USER_HOME$/Downloads/flutter/bin/flutter\" />\n      <option name=\"SCRIPT_OPTIONS\" value=\"\" />\n      <option name=\"INDEPENDENT_SCRIPT_WORKING_DIRECTORY\" value=\"true\" />\n      <option name=\"SCRIPT_WORKING_DIRECTORY\" value=\"$PROJECT_DIR$/../..\" />\n      <option name=\"INDEPENDENT_INTERPRETER_PATH\" value=\"true\" />\n      <option name=\"INTERPRETER_PATH\" value=\"/usr/bin\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"zsh\" />\n      <option name=\"EXECUTE_IN_TERMINAL\" value=\"true\" />\n      <option name=\"EXECUTE_SCRIPT_FILE\" value=\"true\" />\n      <envs />\n      <method v=\"2\" />\n    </configuration>\n    <list>\n      <item itemvalue=\"Python.data_generator\" />\n      <item itemvalue=\"Python.depreciation_service\" />\n      <item itemvalue=\"Python.model\" />\n      <item itemvalue=\"Python.train\" />\n      <item itemvalue=\"Python.classifer\" />\n      <item itemvalue=\"Shell Script.flutter\" />\n    </list>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Python.train\" />\n        <item itemvalue=\"Python.data_generator\" />\n        <item itemvalue=\"Python.model\" />\n        <item itemvalue=\"Python.depreciation_service\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.22855.92\" />\n        <option value=\"bundled-python-sdk-b068d85d1acf-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.22855.92\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"35c2ec3a-02a5-4fc7-9569-3b24475fa06d\" name=\"Changes\" comment=\"\" />\n      <created>1726980227279</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1726980227279</updated>\n      <workItem from=\"1726980230671\" duration=\"381000\" />\n      <workItem from=\"1726981248813\" duration=\"15180000\" />\n      <workItem from=\"1727029801461\" duration=\"45431000\" />\n      <workItem from=\"1727402309791\" duration=\"18968000\" />\n      <workItem from=\"1727534571917\" duration=\"19503000\" />\n      <workItem from=\"1727660264662\" duration=\"68443000\" />\n      <workItem from=\"1728067823215\" duration=\"15506000\" />\n      <workItem from=\"1728412252904\" duration=\"7112000\" />\n      <workItem from=\"1728538937704\" duration=\"470000\" />\n      <workItem from=\"1728539736268\" duration=\"1089000\" />\n      <workItem from=\"1728540919752\" duration=\"1524000\" />\n      <workItem from=\"1728542569936\" duration=\"145000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"pushh\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728415148125</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728415148125</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"slug too large - lessened dependencies\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728446678799</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728446678799</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"slug too large - lessened dependencies\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728447300123</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728447300123</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"slug too large - lessened dependencies\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728539101734</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728539101735</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"slug too large - lessened dependencies\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728542383572</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728542383572</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"slug too large - lessened dependencies\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728542512663</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728542512663</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"slug too large - lessened dependencies\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1728542645894</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1728542645894</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"8\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"pushh\" />\n    <MESSAGE value=\"slug too large - lessened dependencies\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"slug too large - lessened dependencies\" />\n  </component>\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\n    <SUITE FILE_PATH=\"coverage/GarmentzCode$classifer___Pretrained_model_for_image_recognition_using_MobileNetV2.coverage\" NAME=\"classifer # Pretrained model for image recognition using MobileNetV2 Coverage Results\" MODIFIED=\"1726995048542\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/backend/models\" />\n    <SUITE FILE_PATH=\"coverage/GarmentzCode$model.coverage\" NAME=\"model Coverage Results\" MODIFIED=\"1727768719196\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/backend/models\" />\n    <SUITE FILE_PATH=\"coverage/GarmentzCode$depreciation_service.coverage\" NAME=\"depreciation_service Coverage Results\" MODIFIED=\"1727660629067\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/backend/api_services\" />\n    <SUITE FILE_PATH=\"coverage/GarmentzCode$models.coverage\" NAME=\"models Coverage Results\" MODIFIED=\"1726982555913\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/models # Pre-trained ML models\" />\n    <SUITE FILE_PATH=\"coverage/GarmentzCode$train.coverage\" NAME=\"train Coverage Results\" MODIFIED=\"1727801897302\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/backend/datasets/train\" />\n    <SUITE FILE_PATH=\"coverage/GarmentzCode$data_generator.coverage\" NAME=\"data_generator Coverage Results\" MODIFIED=\"1727768745849\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"coverage.py\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" WORKING_DIRECTORY=\"$PROJECT_DIR$/backend/models\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 6970d14e66e5fe6b30863e4d6ba86bf46ff66177)
++++ b/.idea/workspace.xml	(date 1728543036206)
+@@ -4,9 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="35c2ec3a-02a5-4fc7-9569-3b24475fa06d" name="Changes" comment="slug too large - lessened dependencies">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-    </list>
++    <list default="true" id="35c2ec3a-02a5-4fc7-9569-3b24475fa06d" name="Changes" comment="slug too large - lessened dependencies" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -37,6 +35,11 @@
+   </component>
+   <component name="Git.Settings">
+     <option name="PUSH_AUTO_UPDATE" value="true" />
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="master" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="GitHubPullRequestSearchHistory">{
+@@ -65,35 +68,35 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+-    &quot;Python.classifer # Pretrained model for image recognition using MobileNetV2.executor&quot;: &quot;Debug&quot;,
+-    &quot;Python.data_generator.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.depreciation_service.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.model.executor&quot;: &quot;Run&quot;,
+-    &quot;Python.models.executor&quot;: &quot;Debug&quot;,
+-    &quot;Python.train.executor&quot;: &quot;Run&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;Shell Script.flutter.executor&quot;: &quot;Run&quot;,
+-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "DefaultHtmlFileTemplate": "HTML File",
++    "Python.classifer # Pretrained model for image recognition using MobileNetV2.executor": "Debug",
++    "Python.data_generator.executor": "Run",
++    "Python.depreciation_service.executor": "Run",
++    "Python.model.executor": "Run",
++    "Python.models.executor": "Debug",
++    "Python.train.executor": "Run",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "Shell Script.flutter.executor": "Run",
++    "dart.analysis.tool.window.visible": "false",
++    "git-widget-placeholder": "Garmentz__",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "run.code.analysis.last.selected.profile": "aDefault",
++    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
++    "vue.rearranger.settings.migration": "true"
+   },
+-  &quot;keyToStringList&quot;: {
+-    &quot;DatabaseDriversLRU&quot;: [
+-      &quot;mongo&quot;
++  "keyToStringList": {
++    "DatabaseDriversLRU": [
++      "mongo"
+     ]
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/backend/render_templates" />
+@@ -278,7 +281,7 @@
+       <workItem from="1728538937704" duration="470000" />
+       <workItem from="1728539736268" duration="1089000" />
+       <workItem from="1728540919752" duration="1524000" />
+-      <workItem from="1728542569936" duration="145000" />
++      <workItem from="1728542569936" duration="426000" />
+     </task>
+     <task id="LOCAL-00001" summary="pushh">
+       <option name="closed" value="true" />
+@@ -336,7 +339,23 @@
+       <option name="project" value="LOCAL" />
+       <updated>1728542645894</updated>
+     </task>
+-    <option name="localTasksCounter" value="8" />
++    <task id="LOCAL-00008" summary="slug too large - lessened dependencies">
++      <option name="closed" value="true" />
++      <created>1728542908345</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1728542908346</updated>
++    </task>
++    <task id="LOCAL-00009" summary="slug too large - lessened dependencies">
++      <option name="closed" value="true" />
++      <created>1728542920092</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1728542920092</updated>
++    </task>
++    <option name="localTasksCounter" value="10" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
