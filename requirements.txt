@@ -9,5 +9,5 @@ scikit-learn~=1.5.0
 botocore~=1.35.34
 firebase-admin~=6.5.0
 gunicorn
-numpy==2.1.2 --only-binary=:all:
+numpy>1.26.0
 scipy --only-binary=:all:
