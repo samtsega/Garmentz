@@ -70,6 +70,10 @@
       <excludeFolder url="file://$MODULE_DIR$/garmentz_flutter_frontend/windows/flutter/ephemeral/.plugin_symlinks/image_picker_windows/example/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/garmentz_flutter_frontend/windows/flutter/ephemeral/.plugin_symlinks/image_picker_windows/example/build" />
       <excludeFolder url="file://$MODULE_DIR$/.venv2" />
+      <excludeFolder url="file://$MODULE_DIR$/garmentz_flutter_frontend/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/garmentz_flutter_frontend/linux/flutter/ephemeral" />
+      <excludeFolder url="file://$MODULE_DIR$/garmentz_flutter_frontend/macos/Flutter/ephemeral" />
+      <excludeFolder url="file://$MODULE_DIR$/garmentz_flutter_frontend/windows/flutter/ephemeral" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.12 (GarmentzCode)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
