@@ -3,10 +3,11 @@ import requests
 import logging
 from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
-from depreciation_service import calculate_depreciation
-from currency_conversion import convert_currency
-from image_processing import process_image
-from wear_tear_model import predict_wear_and_tear
+from backend.app import predict_wear_tear
+from backend.services.depreciation_service import calculate_depreciation
+from backend.utils.currency_conversions import convert_currency
+from backend.utils.image_processing import process_image
+from backend.models.wear_tear_model import predict_wear_and_tear
 
 app = Flask(__name__)
 
@@ -17,7 +18,7 @@ def get_wear_and_tear_score():
     data = request.json
     
     # Calculate the wear and tear score using the imported function
-    score = calculate_wear_and_tear(data)
+    score = predict_wear_tear(data)
 
     # Return the score as a JSON response
     return jsonify({'wear_and_tear_score': score})
@@ -91,7 +92,7 @@ def calculate_depreciation_route():
         'converted_value': converted_value,
         'currency': target_currency,
         'estimated_age': depreciation_result['estimated_age'],
-        'predict_wear_and_tear': wear_tear_score,
+        'predict_wear_and_tear': predict_wear_and_tear,
         'brand': brand,
         'fabric': fabric,
         'platform': platform }
