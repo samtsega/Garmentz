@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35c2ec3a-02a5-4fc7-9569-3b24475fa06d" name="Changes" comment="slug too large - lessened dependencies">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="35c2ec3a-02a5-4fc7-9569-3b24475fa06d" name="Changes" comment="slug too large - lessened dependencies" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +35,11 @@
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -78,7 +81,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Shell Script.flutter.executor&quot;: &quot;Run&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Garmentz__&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -235,11 +238,11 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.classifer" />
       <item itemvalue="Python.data_generator" />
       <item itemvalue="Python.depreciation_service" />
       <item itemvalue="Python.model" />
       <item itemvalue="Python.train" />
-      <item itemvalue="Python.classifer" />
       <item itemvalue="Shell Script.flutter" />
     </list>
     <recent_temporary>
@@ -278,7 +281,7 @@
       <workItem from="1728538937704" duration="470000" />
       <workItem from="1728539736268" duration="1089000" />
       <workItem from="1728540919752" duration="1524000" />
-      <workItem from="1728542569936" duration="145000" />
+      <workItem from="1728542569936" duration="426000" />
     </task>
     <task id="LOCAL-00001" summary="pushh">
       <option name="closed" value="true" />
@@ -336,7 +339,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728542645894</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="slug too large - lessened dependencies">
+      <option name="closed" value="true" />
+      <created>1728542908345</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1728542908346</updated>
+    </task>
+    <task id="LOCAL-00009" summary="slug too large - lessened dependencies">
+      <option name="closed" value="true" />
+      <created>1728542920092</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1728542920092</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
