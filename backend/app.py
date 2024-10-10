@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 from utils.image_processing import process_image
 from utils.currency_conversions import convert_currency
 from services.depreciation_service import calculate_depreciation
-from render_templates import index.html
 
 load_dotenv()
 
