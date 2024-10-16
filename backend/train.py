@@ -3,66 +3,75 @@ from tf_keras.models import Sequential
 from tf_keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout
 from tf_keras.preprocessing.image import ImageDataGenerator
 from tf_keras.optimizers import Adam
-import tensorflow as tf
 import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
+import tensorflow as tf
 
-# Image Data Generators for training and validation
-train_datagen = ImageDataGenerator(
-    rescale=1.0 / 255, # Normalize pixel values to [0, 1]
-    shear_range=0.2, # Randomly shear images
-    zoom_range=0.2, # Randomly zoom images
-    horizontal_flip=True, # Randomly flip images horizontally
-    validation_split=0.2 # Reserve 20% of data for validation
+# Paths
+dataset_dir = 'path/to/your/dataset'  # Replace with the path to your dataset
+model_save_path = 'models/depreciation_model.h5'
+
+# Parameters
+img_width, img_height = 224, 224
+batch_size = 32
+epochs = 10  # Adjust based on your needs
+num_classes = 3  # For 'heavily lightly_worn', 'lightly lightly_worn', and 'not lightly_worn'
+
+# Data Augmentation and Preprocessing
+datagen = ImageDataGenerator(
+    rescale=1.0 / 255,        # Normalize pixel values to [0, 1]
+    shear_range=0.2,          # Apply random shear transformations
+    zoom_range=0.2,           # Randomly zoom into images
+    horizontal_flip=True,     # Randomly flip images horizontally
+    validation_split=0.2      # Split data into 80% training, 20% validation
 )
 
-train_generator = train_datagen.flow_from_directory( 'path_to_wear_tear_dataset/heavily_worn',
-    target_size=(224, 224), # Resize images batch_size=32,
-    class_mode='categorical',
-    subset='training' # Subset for training
+# Load the training and validation data
+train_generator = datagen.flow_from_directory(
+    dataset_dir,
+    target_size=(img_width, img_height),
+    batch_size=batch_size,
+    class_mode='categorical',  # Multi-class classification
+    subset='training'         # Training data
 )
 
-validation_generator = train_datagen.flow_from_directory( 'path_to_wear_tear_dataset/heavily_worn',
-    target_size=(224, 224),
-    batch_size=32,
-    class_mode='categorical',
-    subset='validation' # Subset for validation
+validation_generator = datagen.flow_from_directory(
+    dataset_dir,
+    target_size=(img_width, img_height),
+    batch_size=batch_size,
+    class_mode='categorical',  # Multi-class classification
+    subset='validation'       # Validation data
 )
 
-# Model architecture
-model = Sequential([
-    Conv2D(32, (3, 3), activation='relu', input_shape=(224, 224, 3)),
-    MaxPooling2D(pool_size=(2, 2)),
+# Build the Model using MobileNetV2 (Transfer Learning)
+base_model = MobileNetV2(weights='imagenet', include_top=False, input_shape=(img_width, img_height, 3))
 
-    Conv2D(64, (3, 3), activation='relu'),
-    MaxPooling2D(pool_size=(2, 2)),
+# Freeze the base model layers
+base_model.trainable = False
 
-    Conv2D(128, (3, 3), activation='relu'),
-    MaxPooling2D(pool_size=(2, 2)),
+# Add custom layers on top of the base model
+x = base_model.output
+x = GlobalAveragePooling2D()(x)  # Global average pooling layer
+x = Dense(1024, activation='relu')(x)  # Fully connected layer with 1024 units
+output = Dense(num_classes, activation='softmax')(x)  # Output layer with 3 classes
 
-    Flatten(),
-    Dense(128, activation='relu'),
-    Dropout(0.5),
-    Dense(train_generator.num_classes, activation='softmax') # Softmax for multi-class classification
-])
+# Create the final model
+model = Model(inputs=base_model.input, outputs=output)
 
 # Compile the model
-model.compile(
-    optimizer=Adam(learning_rate=0.0001),
-    loss='categorical_crossentropy',
-    metrics=['accuracy']
-)
+model.compile(optimizer=Adam(), loss='categorical_crossentropy', metrics=['accuracy'])
 
 # Train the model
-model.fit(
+history = model.fit(
     train_generator,
-
-steps_per_epoch=train_generator.samples // train_generator.batch_size,
+    steps_per_epoch=train_generator.samples // batch_size,
+    validation_steps=validation_generator.samples // batch_size,
     validation_data=validation_generator,
-validation_steps=validation_generator.samples // validation_generator.batch_size,
-    epochs=10 # Adjust based on dataset size
+    epochs=epochs
 )
 
-# Save the trained model to an H5 file
+# Save the trained model
+if not os.path.exists('models'):
+    os.makedirs('models')
+model.save(model_save_path)
 
-model.save('wear_and_tear_model.h5')
+print(f"Model saved to {model_save_path}")

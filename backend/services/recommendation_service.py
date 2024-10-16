@@ -1,7 +1,5 @@
-from backend.api import saksfifth_data
 from ebay_service import fetch_ebay_data
-from saksfifth_service import fetch_saksfifth_data
-from amazon_service import fetch_amazon_data
+
 
 def get_recommendations(item_name, platforms=None):
     """ Fetch similar items from various platforms based on the item_name.

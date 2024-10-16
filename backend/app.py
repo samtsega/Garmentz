@@ -8,7 +8,6 @@ from utils.image_processing import process_image
 from utils.currency_conversions import convert_currency
 from services.depreciation_service import calculate_depreciation
 
-
 load_dotenv()
 
 # Initialize Flask app

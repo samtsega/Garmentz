@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_flux/flutter_flux.dart'; // Flux package for state management
-import 'screens/recommendation_store/image_picker_screen.dart';
-import 'stores/recommendation_store/recommendation_store.dart'; // Importing the store for recommendation state
-void main() { // Initialize Flux stores before running the app
-    initializeRecommendationStore(); runApp(MyApp());
+import 'home_screen.dart';               // Import your home screen
+import 'recommendation_screen.dart';    // Import recommendation screen
+import 'settings_screen.dart';           // Import settings screen
+import 'constants.dart';                 // Import constants file
+
+void main() {
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-    @override
-    Widget build(BuildContext context) {
-        return MaterialApp(
-            title: 'Recommendations by Garmentz',
-            theme: ThemeData(
-                primarySwatch: Colors.teal,
-                visualDensity: VisualDensity.adaptivePlatformDensity,
-                textTheme: TextTheme( headline6: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                bodyText2: TextStyle(fontSize: 16),
-                ),
-             ),
-             home: ImagePickerScreen(), // Main screen with image picker and recommendation feature
-             );
-            }
-           }
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: AppConstants.appTitle,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,          // Primary color for the app
+        accentColor: AppConstants.secondaryColor, // Accent color from constants
+        textTheme: TextTheme(
+          headline1: AppConstants.titleTextStyle, // Title text style
+          bodyText1: AppConstants.bodyTextStyle,   // Body text style
+        ),
+      ),
+      home: HomeScreen(),                        // Set the home screen of the app
+      routes: {

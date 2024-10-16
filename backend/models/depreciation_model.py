@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd
 from tf_keras.applications import VGG16
 from tf_keras.models import Model, Sequential
@@ -6,7 +5,6 @@ from tf_keras.layers import Dense, Flatten, Dropout, Input, concatenate
 from tf_keras.preprocessing.image import ImageDataGenerator
 from tf_keras.optimizers import Adam
 from sklearn.preprocessing import LabelEncoder
-from tf_keras.utils import to_categorical
 from datetime import datetime
 
 # 1. Load the pre-trained VGG16 model (for image feature extraction)
@@ -26,7 +24,7 @@ data = pd.read_csv('path_to_your_csv/data.csv')
 
 # 3. Preprocess the metadata
 # Convert purchase date to age (years)
-data['age'] = data['purchase_date'].apply(lambda x: (datetime.now() - datetime.strptime(x, '%Y-%m-%d')).days / 365)
+data['age'] = data['purchase_date'].apply(lambda purchase_date: (datetime.now() - datetime.strptime(x, '%Y-%m-%d')).days / 365)
 
 # Label encode categorical features like brand and fabric
 label_encoder_brand = LabelEncoder()
