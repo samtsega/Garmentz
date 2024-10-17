@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, redirect, url_for, render_template, session
 from authlib.integrations.flask_client import OAuth
 from tf_keras.models import load_model
+from werkzeug.utils import secure_filename
 import numpy as np
 import os
 from dotenv import load_dotenv
@@ -122,6 +123,51 @@ def account_deletion():
     print("Received account deletion notification:", data)
 
     # Implement logic to delete the user's data from your system here
+
+# Define upload folder and allowed extensions
+UPLOAD_FOLDER = 'backend.upload/'
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
+app.config['backend.upload'] = UPLOAD_FOLDER
+
+# Ensure the upload folder exists
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
+
+def allowed_file(filename):
+    """Check if the uploaded file is allowed based on its extension."""
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+# Flask route to handle image upload
+@app.route('/upload-image', methods=['POST'])
+def upload_image():
+    if 'image' not in request.files:
+        return jsonify({'error': 'No file part'}), 400
+
+    file = request.files['image']
+
+    if file.filename == '':
+        return jsonify({'error': 'No selected file'}), 400
+
+    if file and allowed_file(file.filename):
+        filename = secure_filename(file.filename)
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        file.save(file_path)
+
+        # Process the image by passing its path
+        preprocessed_image = process_image(file_path)
+
+        if preprocessed_image is not None:
+            # You can now use this preprocessed image for prediction or other tasks
+            # For example, you might load a model and make predictions here
+            # model = load_model('clothing_model.h5')
+            # predictions = model.predict(preprocessed_image)
+
+            return jsonify({'message': 'Image uploaded and processed successfully'}), 200
+        else:
+            return jsonify({'error': 'Image preprocessing failed'}), 500
+    else:
+        return jsonify({'error': 'Invalid file type'}), 400
+
 
 # Load the trained model
 wear_and_tear_model = load_model('models/wear_and_tear_model.h5')

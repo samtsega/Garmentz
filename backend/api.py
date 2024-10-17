@@ -76,7 +76,7 @@ def calculate_depreciation_route():
     print(f"Original Price: {original_price}")
 
     # Step 4: Calculate depreciation based on age, brand, fabric, and predicted wear and tear
-    depreciation_result = calculate_depreciation(filepath, brand, fabric, purchase_date, wear_tear_score)
+    depreciation_result = calculate_depreciation(filepath, brand, fabric, purchase_date, predict_wear_tear)
     current_value_in_usd = depreciation_result['current_value']
     print(f"Current Value (USD): {current_value_in_usd}")
 

@@ -1,11 +1,10 @@
-import os
 import numpy as np
 import tf_keras
-from tf_keras.models import Sequential
-from tf_keras.layers import Dense, Flatten, Dropout
 from tf_keras.applications import VGG16
-from tf_keras.preprocessing.image import ImageDataGenerator
+from tf_keras.layers import Dense, Flatten, Dropout
+from tf_keras.models import Sequential
 from tf_keras.optimizers import Adam
+from tf_keras.preprocessing.image import ImageDataGenerator
 
 # Ensure the TensorFlow version is correct
 print(f"Using TensorFlow version: {tf_keras.__version__}")

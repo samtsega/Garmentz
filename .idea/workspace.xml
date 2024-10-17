@@ -5,32 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35c2ec3a-02a5-4fc7-9569-3b24475fa06d" name="Changes" comment="fresh">
-      <change afterPath="$PROJECT_DIR$/backend/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/datasets/lightly_worn/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/datasets/lightly_worn/lightly_worn_import_csv.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/image_processing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/services/image_processing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.slugignore" beforeDir="false" afterPath="$PROJECT_DIR$/.slugignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/depreciation_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/depreciation_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/amazon_service.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/wear_tear_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/wear_tear_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/image_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/image_processing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/services/recommendation_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/recommendation_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/saksfifth_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/datasets/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/actions/lib/recommendation_actions.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/actions/lib/recommendation_actions.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/bin/image_picker_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/bin/image_picker_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/home_screen/lib/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/home_screen/lib/home_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/recommendation_screen/lib/recommendation_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/recommendation_screen/lib/recommendation_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/settings_screen/lib/settings_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/settings_screen/lib/settings_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services/api_service/lib/api_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services/api_service/lib/api_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services/image_service/lib/image_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services/image_service/lib/image_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/stores/image_picker_store/lib/image_picker_store.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/stores/image_picker_store/lib/image_picker_store.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/utils/lib/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/utils/lib/constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,7 +315,7 @@
       <workItem from="1728546436330" duration="4626000" />
       <workItem from="1728552236903" duration="2923000" />
       <workItem from="1728555378194" duration="5080000" />
-      <workItem from="1729010968896" duration="8514000" />
+      <workItem from="1729010968896" duration="12028000" />
     </task>
     <task id="LOCAL-00001" summary="pushh">
       <option name="closed" value="true" />
@@ -648,7 +629,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728563264336</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="fresh">
+      <option name="closed" value="true" />
+      <created>1729109041286</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1729109041286</updated>
+    </task>
+    <task id="LOCAL-00041" summary="fresh">
+      <option name="closed" value="true" />
+      <created>1729180332182</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1729180332182</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
