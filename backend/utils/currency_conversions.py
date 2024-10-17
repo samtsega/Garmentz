@@ -1,7 +1,7 @@
 import requests
 
 # API base URL (for example, using a public currency conversion API like ExchangeRate-API or a similar service)
-API_URL = "https://api.exchangerate-api.com/v4/latest/"
+API_URL = "https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_AtcpIMpdjpbOFPPzF4Vpg7z2FdJSJOzimoO5jC77"
 
 def get_conversion_rate(base_currency, target_currency):
     """ Fetch the conversion rate from base_currency to target_currency using an API.

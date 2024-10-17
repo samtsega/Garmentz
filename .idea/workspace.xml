@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35c2ec3a-02a5-4fc7-9569-3b24475fa06d" name="Changes" comment="fresh">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_10_24,_2_57_AM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_10_24__2_57_AM__Changes_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/font/Staatliches-Regular.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/home_screen/lib/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/home_screen/lib/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/currency_conversions.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/currency_conversions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services/image_service/lib/image_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services/image_service/lib/image_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/utils/lib/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/utils/lib/constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/widgets/clothing_card/clothing_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/widgets/clothing_card/clothing_card.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/widgets/custom_button/lib/custom_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/widgets/custom_button/lib/custom_button.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/widgets/recommendation_list/lib/recommendation_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/widgets/recommendation_list/lib/recommendation_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,11 +136,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/garmentz_flutter_frontend/fonts" />
+      <recent name="$PROJECT_DIR$/garmentz_flutter_frontend" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/backend" />
       <recent name="$PROJECT_DIR$/backend/datasets/lightly_worn" />
-      <recent name="$PROJECT_DIR$/.venv2/lib/python3.12" />
-      <recent name="$PROJECT_DIR$/backend/render_templates" />
     </key>
   </component>
   <component name="RunManager" selected="Docker.Dockerfile">
@@ -265,12 +267,12 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Docker.Dockerfile" />
       <item itemvalue="Python.data_generator" />
       <item itemvalue="Python.depreciation_service" />
       <item itemvalue="Python.model" />
       <item itemvalue="Python.train" />
       <item itemvalue="Shell Script.flutter" />
-      <item itemvalue="Docker.Dockerfile" />
     </list>
     <recent_temporary>
       <list>
@@ -317,6 +319,9 @@
       <workItem from="1728555378194" duration="5080000" />
       <workItem from="1729010968896" duration="21976000" />
       <workItem from="1729197698706" duration="8000" />
+      <workItem from="1729198701437" duration="5000" />
+      <workItem from="1729198718224" duration="1399000" />
+      <workItem from="1729200160969" duration="947000" />
     </task>
     <task id="LOCAL-00001" summary="pushh">
       <option name="closed" value="true" />

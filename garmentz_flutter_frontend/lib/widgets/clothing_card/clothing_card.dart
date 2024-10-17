@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'font.dart'; // Import your fonts file
 
 class ClothingCard extends StatelessWidget
 {

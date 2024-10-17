@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'font.dart'; // Import your fonts file
 
 // A custom button widget
 class CustomButton extends StatelessWidget {
@@ -14,7 +15,7 @@ class CustomButton extends StatelessWidget {
     Key? key,
     required this.text,
     required this.onPressed,
-    this.color = Colors.blue,          // Default color
+    this.color = Colors.black,          // Default color
     this.textColor = Colors.white,     // Default text color
     this.elevation = 2.0,              // Default elevation
     this.borderRadius = 8.0,           // Default border radius

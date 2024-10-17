@@ -8,9 +8,9 @@ class AppConstants {
   static const String logoUrl = 'https://yourwebsite.com/logo.png';
 
   // Color Constants
-  static const Color primaryColor = Color(B5838D);
-  static const Color secondaryColor = Color(E5989B);
-  static const Color accentColor = Color(FF);
+  static const Color primaryColor = Color(E5989B);
+  static const Color secondaryColor = Color(FFB4A2);
+  static const Color accentColor = Color(FFCDB2);
 
   // Text Styles
   static const TextStyle titleTextStyle = TextStyle(

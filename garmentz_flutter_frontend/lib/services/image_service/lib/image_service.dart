@@ -41,7 +41,7 @@ class _SomeScreenState extends State<SomeScreen> {
             ),
             ElevatedButton(
               onPressed: _captureImage,
-              child: Text("Capture Garment with Camera"),
+              child: Text("Capture Garment with your camera."),
             ),
           ],
         ),
