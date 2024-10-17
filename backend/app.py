@@ -1,4 +1,5 @@
-from flask import Flask, request, response, jsonify, redirect, url_for, render_template, session
+from flask import Flask, request,jsonify, redirect, url_for, render_template, session
+from flask_cors import CORS
 from authlib.integrations.flask_client import OAuth
 from tf_keras.models import load_model
 from werkzeug.utils import secure_filename
@@ -13,6 +14,9 @@ load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
+CORS(app)
+
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
 
 app.secret_key = 'your_secret_key'  # Replace with your actual secret key
 oauth = OAuth(app)

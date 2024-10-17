@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # eBay API credentials
-EBAY_APP_ID = os.getenv('SamuelTs-Garmentz-SBX-04f97b41c-dcb02ddc')
+EBAY_APP_ID = os.getenv('SamuelTs-Garmentz-PRD-c4f84c9e4-f2356953')
 EBAY_DEV_ID = os.getenv('b7535707-f3c1-4b2f-bf43-dd4ac4b60d41')
 EBAY_CERT_ID = os.getenv('SBX-4f97b41c1267-bbf8-47d5-904a-6526')
 EBAY_REDIRECT_URI = os.getenv('Samuel_Tsega-SamuelTs-Garmen-usxnk')

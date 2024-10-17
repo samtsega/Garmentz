@@ -8,6 +8,7 @@ Werkzeug
 tensorflow
 pandas
 python-dotenv
+Flask-cors
 scikit-learn
 numpy
 Pillow
