@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'colors.dart'; // Import your custom colors
+import 'font.dart'; // Import your fonts file
 
 class AppConstants {
   // API Base URL

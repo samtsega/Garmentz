@@ -6,6 +6,7 @@
  import '../stores/recommendation_store/recommendation_store.dart';
  import '../widgets/recommendation_store/clothing_card.dart';
 
+
 class ImagePickerScreen extends StatefulWidget {
     @override _ImagePickerScreenState createState() => _ImagePickerScreenState();
 }
@@ -68,7 +69,7 @@ class _ImagePickerScreenState extends State<ImagePickerScreen> with StoreWatcher
                 SizedBox(height: 20),
                 ElevatedButton.icon( onPressed: _pickImageFromGallery,
                 icon: Icon(Icons.image),
-                label: Text('Pick your clothing from your gallery.'),
+                label: Text('Pick your garment from your gallery.'),
                 style: ElevatedButton.styleFrom(
                   primary: Colors.primaryColor,
                   padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),

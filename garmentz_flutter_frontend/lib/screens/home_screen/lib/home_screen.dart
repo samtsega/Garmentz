@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'recommendations_screen.dart'; // Import the recommendations page
 
+
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

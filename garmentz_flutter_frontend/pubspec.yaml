@@ -32,7 +32,7 @@ assets:
   - assets/images/
 
 # Specify custom fonts if using fonts:
-  - family: Staatliches
+  - family: Staatliches-Regular
     fonts:
       - asset: font/Staatliches-regular.ttf
       - asset: font/Staatliches-regular.ttf

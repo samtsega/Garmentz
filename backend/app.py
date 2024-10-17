@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 import numpy as np
 import os
 from dotenv import load_dotenv
-from utils.image_processing import process_image
+from services.image_processing import load_and_preprocess_image
 from utils.currency_conversions import convert_currency
 from services.depreciation_service import calculate_depreciation
 
@@ -158,7 +158,7 @@ def upload_image():
         file.save(file_path)
 
         # Process the image by passing its path
-        preprocessed_image = process_image(file_path)
+        preprocessed_image = load_and_preprocess_image(file_path)
 
         if preprocessed_image is not None:
             # You can now use this preprocessed image for prediction or other tasks
@@ -182,7 +182,7 @@ def predict_wear_tear():
     if 'image' not in request.files:
         return jsonify({'error': 'No image file provided'}), 400
     image_file = request.files['image']
-    image_array = process_image(image_file)
+    image_array = load_and_preprocess_image(image_file)
 
     # Use the loaded model to predict wear and tear
     prediction = wear_and_tear_model.predict(image_array)
@@ -209,7 +209,7 @@ def calculate_depreciation_endpoint():
     fabric = data.get('fabric')
     purchase_date = data.get('purchase_date')
     target_currency = data.get('target_currency')
-    image_array = process_image(image_file)
+    image_array = load_and_preprocess_image(image_file)
 
     # Predict depreciation based on the image and other details
     depreciation_data = calculate_depreciation( image_array, brand, fabric, purchase_date, target_currency )
