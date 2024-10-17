@@ -7,11 +7,11 @@
     <list default="true" id="35c2ec3a-02a5-4fc7-9569-3b24475fa06d" name="Changes" comment="fresh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/wear_tear_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/wear_tear_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/image_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/image_processing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/recommendation_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/recommendation_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/home_screen/lib/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/home_screen/lib/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/image_picker_screen/image_picker_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/image_picker_screen/image_picker_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/recommendation_screen/lib/recommendation_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/recommendation_screen/lib/recommendation_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/utils/lib/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/utils/lib/constants.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +315,7 @@
       <workItem from="1728546436330" duration="4626000" />
       <workItem from="1728552236903" duration="2923000" />
       <workItem from="1728555378194" duration="5080000" />
-      <workItem from="1729010968896" duration="12028000" />
+      <workItem from="1729010968896" duration="14239000" />
     </task>
     <task id="LOCAL-00001" summary="pushh">
       <option name="closed" value="true" />
@@ -645,7 +645,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729180332182</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="fresh">
+      <option name="closed" value="true" />
+      <created>1729183588809</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1729183588809</updated>
+    </task>
+    <task id="LOCAL-00043" summary="fresh">
+      <option name="closed" value="true" />
+      <created>1729183889056</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1729183889056</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

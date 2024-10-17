@@ -24,7 +24,7 @@ def get_wear_and_tear_score():
     return jsonify({'wear_and_tear_score': score})
 
 # Configure the upload folder for images
-app.config['UPLOAD_FOLDER'] = 'path_to_your_upload_directory'
+app.config['UPLOAD_FOLDER'] = 'backend.upload'
 
 # Helper function to get the original price of the clothing item from different platforms
 def get_original_price(brand, product_id, platform):

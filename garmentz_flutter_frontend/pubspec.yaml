@@ -34,6 +34,6 @@ assets:
 # Specify custom fonts if using fonts:
   - family: Roboto
     fonts:
-      - asset: fonts/Roboto-Regular.ttf
-      - asset: fonts/Roboto-Bold.ttf
+      - asset: fontss/Staatliches-regular.ttf
+      - asset: fontss/Staatliches-regular.ttf
         weight: 700

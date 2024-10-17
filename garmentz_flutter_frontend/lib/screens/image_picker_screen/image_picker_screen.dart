@@ -57,7 +57,7 @@ class _ImagePickerScreenState extends State<ImagePickerScreen> with StoreWatcher
                     EdgeInsets.all(16.0),
                       child: Column(
                         mainAxisAlignment:MainAxisAlignment.center, children: [
-                          Text( 'Scan your clothing to get recommendations.',
+                          Text( 'Scan your garment to get recommendations.',
                             style: Theme.of(context).textTheme.headline6,
                             textAlign: TextAlign.center,
                 ),
@@ -70,7 +70,7 @@ class _ImagePickerScreenState extends State<ImagePickerScreen> with StoreWatcher
                 icon: Icon(Icons.image),
                 label: Text('Pick your clothing from your gallery.'),
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.teal,
+                  primary: Colors.primaryColor,
                   padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                   shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
@@ -84,7 +84,7 @@ class _ImagePickerScreenState extends State<ImagePickerScreen> with StoreWatcher
                 icon: Icon(Icons.camera_alt),
                 label: Text('Take a Photo'),
                 style: ElevatedButton.styleFrom(
-                primary: Colors.teal,
+                primary: Colors.primarycolor,
                 padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                 shape:
                 RoundedRectangleBorder(

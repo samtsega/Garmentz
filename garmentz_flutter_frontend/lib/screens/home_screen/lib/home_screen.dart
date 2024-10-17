@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Welcome to Garmentz!",
+              "Garmentz",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 20),
@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                 // Implement garment scanning functionality here
                 // You might navigate to a scanning page or show a scanner widget
               },
-              child: Text("Scan Garment"),
+              child: Text("Scan your garment."),
             ),
           ],
         ),
