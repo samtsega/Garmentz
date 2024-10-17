@@ -37,11 +37,11 @@ class _SomeScreenState extends State<SomeScreen> {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: _pickImage,
-              child: Text("Pick Image from Gallery"),
+              child: Text("Pick your Garment"),
             ),
             ElevatedButton(
               onPressed: _captureImage,
-              child: Text("Capture Image with Camera"),
+              child: Text("Capture Garment with Camera"),
             ),
           ],
         ),
