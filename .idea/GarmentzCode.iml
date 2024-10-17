@@ -82,4 +82,11 @@
     <option name="requirementsPath" value="$MODULE_DIR$/requirements.txt" />
     <option name="removeUnused" value="true" />
   </component>
+  <component name="TemplatesService">
+    <option name="TEMPLATE_FOLDERS">
+      <list>
+        <option value="$MODULE_DIR$/backend/render_template" />
+      </list>
+    </option>
+  </component>
 </module>
