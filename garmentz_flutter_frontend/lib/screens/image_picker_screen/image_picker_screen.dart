@@ -84,7 +84,7 @@ class _ImagePickerScreenState extends State<ImagePickerScreen> with StoreWatcher
                 icon: Icon(Icons.camera_alt),
                 label: Text('Take a Photo'),
                 style: ElevatedButton.styleFrom(
-                primary: Colors.primarycolor,
+                primary: Colors.secondaryColor,
                 padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                 shape:
                 RoundedRectangleBorder(

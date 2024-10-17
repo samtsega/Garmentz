@@ -23,7 +23,7 @@ class _RecommendationsPageState extends State<RecommendationsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Clothing Recommendations"),
+        title: Text("Garmentz Recommendations"),
       ),
       body: FutureBuilder<List<dynamic>>(
         future: _recommendations,

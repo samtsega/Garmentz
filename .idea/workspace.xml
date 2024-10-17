@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="35c2ec3a-02a5-4fc7-9569-3b24475fa06d" name="Changes" comment="fresh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/home_screen/lib/home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/home_screen/lib/home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/actions/lib/recommendation_actions.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/actions/lib/recommendation_actions.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/image_picker_screen/image_picker_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/image_picker_screen/image_picker_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/recommendation_screen/lib/recommendation_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/screens/recommendation_screen/lib/recommendation_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/utils/lib/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/utils/lib/constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,7 +312,7 @@
       <workItem from="1728546436330" duration="4626000" />
       <workItem from="1728552236903" duration="2923000" />
       <workItem from="1728555378194" duration="5080000" />
-      <workItem from="1729010968896" duration="14239000" />
+      <workItem from="1729010968896" duration="14746000" />
     </task>
     <task id="LOCAL-00001" summary="pushh">
       <option name="closed" value="true" />
@@ -661,7 +658,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729183889056</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="fresh">
+      <option name="closed" value="true" />
+      <created>1729186329584</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1729186329584</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
