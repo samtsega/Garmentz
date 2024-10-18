@@ -74,5 +74,5 @@ def predict_wear_and_tear(image_path):
     img_array = np.expand_dims(img_array, axis=0)  # Add batch dimension
     img_array = img_array / 255.0  # Normalize pixel values
 
-    score = model.predict(img_array)  # Get the wear and tear score
+    wear_tear_score = model.predict(img_array)  # Get the wear and tear score
     return score[0][0]  # Return the score
