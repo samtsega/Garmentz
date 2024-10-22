@@ -1,5 +1,8 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:garmentz/constants.dart';
+
+
 
 class ApiService {
   final String baseUrl; // Base URL for the API

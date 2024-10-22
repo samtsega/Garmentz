@@ -1,39 +1,46 @@
-name: garmentz_scanner
-description: A Flutter app that scans clothing and provides recommendations based on images.
+name: Garmentz
+description: A new Flutter project.
 
-# The version number of the app.
-version: 1.0.0+1
+# Dart and Flutter SDK constraints
 environment:
-  sdk: ">=2.14.0 <4.0.0"
+  sdk: ">=3.5.3 <4.0.0"  # Dart SDK version
+  flutter: ">=3.24.3 <4.0.0"  # Flutter SDK version
 
 dependencies:
   flutter:
-sdk: flutter
+    sdk: flutter
 
-# Image Picker to pick images from gallery or camera
-image_picker: ^0.8.5+3
+  # Add the dependencies you need
+  cupertino_icons: ^1.0.2  # For iOS styling
+  provider: ^6.0.5         # State management solution
+  http: ^0.13.6            # For HTTP requests to APIs
+  image_picker: ^0.8.7     # For picking images from gallery or camera
+  path_provider: ^2.0.11   # For file storage paths on the device
+  shared_preferences: ^2.1.0  # For local storage of small data
+  dio: ^5.0.5              # Alternative to the http package for network requests
+  json_annotation: ^4.8.0  # For JSON parsing
+  flutter_svg: ^1.1.6      # To handle SVG images
+  cached_network_image: ^3.2.3 # For caching network images
 
-# Flux package for state management
-flutter_flux: ">=2.14.0 <4.0.0"
+  # Add more dependencies based on your project needs
 
-# HTTP package to make API requests for recommendations (if needed)
-http: ^0.13.3
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
 
-# Default dependency for iOS-style icons
-cupertino_icons: ^1.0.2
-dev_dependencies:flutter_test:
-  sdk: flutter
+  # Dependency for code generation (optional, if using json_serializable, etc.)
+  build_runner: ^2.3.3
+  json_serializable: ^6.7.1  # For generating JSON serialization code
 
 flutter:
-  uses-material-design: true # Enable Material Icons for the app
+  uses-material-design: true
 
-# Specify assets such as images if required.
-assets:
-  - assets/images/
+  assets:
+    - assets/images/  # Directory for image assets
+    - assets/fonts/   # Directory for custom fonts (optional)
 
-# Specify custom fonts if using fonts:
-  - family: Staatliches-Regular
-    fonts:
-      - asset: font/Staatliches-regular.ttf
-      - asset: font/Staatliches-regular.ttf
-        weight: 700
+  fonts:
+    - family: CustomFont
+      fonts:
+        - asset: assets/fonts/Staatliches-Regular.ttf
+          weight: 700

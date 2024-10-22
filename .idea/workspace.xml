@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="35c2ec3a-02a5-4fc7-9569-3b24475fa06d" name="Changes" comment="fresh">
-      <change afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/font/Staatliches-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/GarmentzCode.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GarmentzCode.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/utils/currency_conversions.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/currency_conversions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services/image_service/lib/image_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services/image_service/lib/image_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.slugignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/depreciation_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/depreciation_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services/api_service/lib/api_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/services/api_service/lib/api_service.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/utils/lib/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/utils/lib/constants.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/widgets/clothing_card/clothing_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/widgets/clothing_card/clothing_card.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/widgets/custom_button/lib/custom_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/lib/widgets/custom_button/lib/custom_button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/garmentz_flutter_frontend/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/garmentz_flutter_frontend/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +78,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Garmentz_" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -104,43 +109,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Python.classifer # Pretrained model for image recognition using MobileNetV2.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.data_generator.executor&quot;: &quot;Run&quot;,
-    &quot;Python.depreciation_service.executor&quot;: &quot;Run&quot;,
-    &quot;Python.model.executor&quot;: &quot;Run&quot;,
-    &quot;Python.models.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.train.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Shell Script.flutter.executor&quot;: &quot;Run&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Garmentz__&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Docker.Dockerfile.executor": "Run",
+    "Python.classifer # Pretrained model for image recognition using MobileNetV2.executor": "Debug",
+    "Python.data_generator.executor": "Run",
+    "Python.depreciation_service.executor": "Run",
+    "Python.model.executor": "Run",
+    "Python.models.executor": "Debug",
+    "Python.train.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Shell Script.flutter.executor": "Run",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "GarmentzV1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "terminal",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mongo&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mongo"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/backend/models" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/garmentz_flutter_frontend/font" />
       <recent name="$PROJECT_DIR$/garmentz_flutter_frontend/fonts" />
       <recent name="$PROJECT_DIR$/garmentz_flutter_frontend" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/backend" />
-      <recent name="$PROJECT_DIR$/backend/datasets/lightly_worn" />
     </key>
   </component>
   <component name="RunManager" selected="Docker.Dockerfile">
@@ -236,6 +241,21 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="flutter" type="ShConfigurationType" singleton="false">
       <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
@@ -321,7 +341,8 @@
       <workItem from="1729197698706" duration="8000" />
       <workItem from="1729198701437" duration="5000" />
       <workItem from="1729198718224" duration="1399000" />
-      <workItem from="1729200160969" duration="947000" />
+      <workItem from="1729200160969" duration="7663000" />
+      <workItem from="1729613614636" duration="5215000" />
     </task>
     <task id="LOCAL-00001" summary="pushh">
       <option name="closed" value="true" />
@@ -691,7 +712,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729191968367</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="fresh">
+      <option name="closed" value="true" />
+      <created>1729201114305</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1729201114305</updated>
+    </task>
+    <task id="LOCAL-00048" summary="fresh">
+      <option name="closed" value="true" />
+      <created>1729208496665</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1729208496665</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -4,7 +4,7 @@ import 'font.dart'; // Import your fonts file
 
 class AppConstants {
   // API Base URL
-  static const String apiBaseUrl = 'https://yourapi.com/api';
+  static const String apiBaseUrl = 'https://garmentz-0cd4fa6d1cda.herokuapp.com/ ';
 
   // Image URLs for logos or icons
   static const String logoUrl = 'https://yourwebsite.com/logo.png';
