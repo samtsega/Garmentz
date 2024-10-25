@@ -67,7 +67,7 @@ def predict_image_class(model, image_path):
 # Example usage of the functions
 if __name__ == '__main__':
     # Load your trained model (make sure to specify the correct path to your model)
-    model = tf_keras.models.load_model('clothing_model.h5')
+    model = tf_keras.models.load_model('wear_tear_model.h5')
 
     # Path to the image you want to predict
     image_path = 'path/to/your/image.jpg'

@@ -3,11 +3,11 @@ import requests
 import logging
 from flask import Flask, request, jsonify
 from werkzeug.utils import secure_filename
-from backend.app import predict_wear_tear
-from backend.services.depreciation_service import calculate_depreciation
-from backend.utils.currency_conversions import convert_currency
-from backend.utils.image_processing import process_image
-from backend.models.wear_tear_model import predict_wear_and_tear
+from GarmentzCode.backend.app import predict_wear_tear
+from GarmentzCode.backend.services.depreciation_service import calculate_depreciation
+from GarmentzCode.backend.utils.currency_conversions import convert_currency
+from GarmentzCode.backend.utils.image_processing import process_image
+from GarmentzCode.backend.models.wear_tear_model import predict_wear_and_tear
 
 app = Flask(__name__)
 

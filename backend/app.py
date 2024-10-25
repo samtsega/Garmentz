@@ -128,6 +128,13 @@ def account_deletion():
 
     # Implement logic to delete the user's data from your system here
 
+@app.route('/marketplace-account-deletion', methods=['POST'])
+def marketplace_account_deletion():
+    notification_data = request.json  # Get the JSON data sent from eBay
+    # Process the notification data as needed
+    print(notification_data)  # For debugging
+    return '', 200  # Respond with a 200 OK status
+
 # Define upload folder and allowed extensions
 UPLOAD_FOLDER = 'backend.upload/'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}

@@ -1,78 +1,119 @@
 import numpy as np
-import tf_keras
+import os
+import scipy
+import pandas as pd
+import tensorflow as tf
 from tf_keras.applications import VGG16
 from tf_keras.layers import Dense, Flatten, Dropout
 from tf_keras.models import Sequential
 from tf_keras.optimizers import Adam
-from tf_keras.preprocessing.image import ImageDataGenerator
+from tf_keras.preprocessing.image import ImageDataGenerator, load_img, img_to_array
 
-# Ensure the TensorFlow version is correct
-print(f"Using TensorFlow version: {tf_keras.__version__}")
+# Set paths
+csv_path = '/Users/samitsega/PycharmProjects/GarmentzCode/backend/metadata/csv/dataset.csv'
+validation_csv_path = '/Users/samitsega/PycharmProjects/GarmentzCode/backend/metadata/validation/validation.csv'
+image_dir = '/Users/samitsega/PycharmProjects/GarmentzCode/backend/image_dataset_dir'  # Directory containing images
 
-# 1. Load the pretrained VGG16 model, excluding the top layers
+# Load CSV data
+data = pd.read_csv(csv_path)
+validation_data = pd.read_csv(validation_csv_path)
+
+# Confirm required columns exist
+required_columns = ['image_name', 'wear_category', 'clothing_type', 'fabric_type', 'wear_signs']
+for col in required_columns:
+    if col not in data.columns or col not in validation_data.columns:
+        raise ValueError(f"CSV files must contain '{col}' column")
+
+# Ensure TensorFlow version is correct
+print(f"Using TensorFlow version: {tf.__version__}")
+
+# Load pretrained VGG16 model, excluding the top layers
 base_model = VGG16(weights='imagenet', include_top=False, input_shape=(224, 224, 3))
+base_model.trainable = False  # Freeze the base model
 
-# 2. Freeze the base model to prevent its weights from updating during training
-base_model.trainable = False
-
-# 3. Create a new model and add custom layers on top of the pretrained model
+# Build and compile the model
 model = Sequential([
-    base_model,              # Add the VGG16 base model
-    Flatten(),               # Flatten the output to feed into fully connected layers
-    Dense(256, activation='relu'),  # Dense layer with 256 units and ReLU activation
-    Dropout(0.5),            # Dropout layer to reduce overfitting
-    Dense(128, activation='relu'),  # Another dense layer
-    Dense(1, activation='sigmoid')   # Output layer for wear and tear score (0 to 1)
+    base_model,
+    Flatten(),
+    Dense(256, activation='relu'),
+    Dropout(0.5),
+    Dense(128, activation='relu'),
+    Dense(len(data['wear_category'].unique()), activation='softmax')  # Adjusted for the number of unique categories
 ])
+model.compile(optimizer=Adam(learning_rate=0.0001), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-# 4. Compile the model with Adam optimizer and binary crossentropy for the loss
-model.compile(optimizer=Adam(learning_rate=0.0001), loss='binary_crossentropy', metrics=['mae'])
+# Map wear categories to numerical labels
+category_mapping = {category: idx for idx, category in enumerate(data['wear_category'].unique())}
 
-# 5. Set up ImageDataGenerator for loading and augmenting the images
+# Define a function to load images and labels
+def load_images_and_labels(df, image_dir):
+    images = []
+    labels = []
+    for idx, row in df.iterrows():
+        img_path = os.path.join(image_dir, row['image_name'])  # Directly use image_name
+        if os.path.exists(img_path):
+            img = load_img(img_path, target_size=(224, 224))
+            img_array = img_to_array(img) / 255.0
+            images.append(img_array)
+            # Map the wear_category to numerical labels using category_mapping
+            wear_category = row['wear_category'].strip()  # Ensure no leading/trailing spaces
+            if wear_category in category_mapping:
+                labels.append(category_mapping[wear_category])  # Append the numerical label
+            else:
+                print(f"Warning: Unknown wear category '{wear_category}' for image {img_path}.")
+        else:
+            print(f"Warning: Image {img_path} not found.")
+    return np.array(images), np.array(labels)
+
+# Load images and labels for training and validation sets
+train_images, train_labels = load_images_and_labels(data, image_dir)
+val_images, val_labels = load_images_and_labels(validation_data, image_dir)
+
+# Set up ImageDataGenerator for augmentation
 train_datagen = ImageDataGenerator(
-    rescale=1.0 / 255,        # Normalize pixel values
     shear_range=0.2,
     zoom_range=0.2,
     horizontal_flip=True
 )
 
-val_datagen = ImageDataGenerator(rescale=1.0 / 255)  # Only normalize validation data
+# Create generators for the loaded images
+train_generator = train_datagen.flow(train_images, train_labels, batch_size=32)
+validation_generator = ImageDataGenerator().flow(val_images, val_labels, batch_size=32)
 
-# 6. Load the training and validation data from directories
-train_generator = train_datagen.flow_from_directory(
-    'path_to_your_dataset/train',          # Update with actual dataset path
-    target_size=(224, 224),                # Match the input size expected by VGG16
-    batch_size=32,
-    class_mode='binary'                     # 'binary' for wear and tear score (0 or 1)
+# Combine training and validation images and labels for reusability
+combined_images = np.concatenate((train_images, val_images))
+combined_labels = np.concatenate((train_labels, val_labels))
+
+# Set up ImageDataGenerator for augmentation (you can also add any additional augmentations)
+train_datagen = ImageDataGenerator(
+    shear_range=0.2,
+    zoom_range=0.2,
+    horizontal_flip=True
 )
 
-validation_generator = val_datagen.flow_from_directory(
-    'path_to_your_dataset/validation',     # Update with actual dataset path
-    target_size=(224, 224),
-    batch_size=32,
-    class_mode='binary'                     # 'binary' for wear and tear score
-)
+# Create a generator for the combined dataset
+combined_generator = train_datagen.flow(combined_images, combined_labels, batch_size=32)
 
-# 7. Train the model
+# Train the model
 model.fit(
-    train_generator,
-    steps_per_epoch=train_generator.samples // train_generator.batch_size,
-    validation_data=validation_generator,
-    validation_steps=validation_generator.samples // validation_generator.batch_size,
-    epochs=10  # Adjust epochs based on your needs
+    combined_generator,
+    steps_per_epoch=len(combined_images) // 32,  # Use the combined dataset length for steps
+    epochs=10
 )
 
-# 8. Save the trained model to an .h5 file
+# Save the model
+model.save('wear_and_tear_model.h5')
+print("Model saved as wear_and_tear_model.h5")
+
+
+# Save the model
 model.save('wear_and_tear_model.h5')
 print("Model saved as wear_and_tear_model.h5")
 
 # Function to predict wear and tear score for a new image
 def predict_wear_and_tear(image_path):
-    """Predict wear and tear score for a given image."""
-    img = tf_keras.preprocessing.image.load_img(image_path, target_size=(224, 224))
-    img_array = tf_keras.preprocessing.image.img_to_array(img)
-    img_array = np.expand_dims(img_array, axis=0)  # Add batch dimension
-    img_array = img_array / 255.0  # Normalize pixel values
-
-    wear_tear_score = model.predict(img_array)  # Get the wear and tear score
-    return score[0][0]  # Return the score
+    img = load_img(image_path, target_size=(224, 224))
+    img_array = img_to_array(img) / 255.0
+    img_array = np.expand_dims(img_array, axis=0)
+    wear_tear_score = model.predict(img_array)
+    return np.argmax(wear_tear_score[0])  # Returns the predicted class index
