@@ -1,12 +1,11 @@
 tf_keras
 requests
-Flask
 Werkzeug~=3.0.4
 Authlib~=1.3.2
 Flask==2.3.2
 Werkzeug
 scikit-learn
-Flaskcors
+Flaskcors==2.1.5
 tensorflow
 pandas
 python-dotenv
