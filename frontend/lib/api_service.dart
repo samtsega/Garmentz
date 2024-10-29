@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:garmentz/constants.dart';
+import 'package:frontend/constants.dart';
 
 
 

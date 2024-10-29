@@ -5,7 +5,8 @@ Werkzeug~=3.0.4
 Authlib~=1.3.2
 Flask==2.3.2
 Werkzeug
-skitlearn
+scikit-learn
+Flaskcors
 tensorflow
 pandas
 python-dotenv

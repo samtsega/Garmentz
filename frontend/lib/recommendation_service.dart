@@ -1,6 +1,6 @@
 import 'dart:convert';  // For encoding/decoding JSON data
 import 'package:http/http.dart' as http;  // To make HTTP requests
-import 'package:garmentz/constants.dart';  // Import constants for base URL and other config
+import 'package:frontend/constants.dart';  // Import constants for base URL and other config
 
 class RecommendationService {
   final String baseUrl = Constants.baseUrl;  // Assuming you have defined your base URL in constants.dart

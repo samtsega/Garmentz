@@ -4,10 +4,11 @@ import 'font.dart'; // Import your fonts file
 
 class AppConstants {
   // API Base URL
-  static const String apiBaseUrl = 'https://garmentz-0cd4fa6d1cda.herokuapp.com/ ';
+  static const String apiBaseUrl = 'https://frontend-0cd4fa6d1cda.herokuapp.com/ ';
 
-  // Image URLs for logos or icons
-  static const String logoUrl = 'https://yourwebsite.com/logo.png';
+ // Image reference for logos or icons
+static const AssetImage logoImage = AssetImage('assets/logo.png');
+
 
   // Color Constants
   static const Color primaryColor = Color(E5989B);
