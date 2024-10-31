@@ -14,8 +14,7 @@ load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app)
-app.config["APP_NAME"] = "https://garmentz1-fa5d7c6634fb.herokuapp.com/"
+app.config["NGROK_URL"] = "https://garmentz1-fa5d7c6634fb.herokuapp.com/"
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '1'
 
